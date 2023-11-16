@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             readMoreLink.addEventListener("click", function(event) {
                 event.preventDefault();
                 textElement.textContent = fullText;
-                readMoreLink.style.display = "none"; // Скрыть "Read More..." после нажатия
+                readMoreLink.style.display = "none"; 
             });
 
             const readMoreWrapper = document.createElement("div");
