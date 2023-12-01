@@ -24,5 +24,36 @@ document.addEventListener("DOMContentLoaded", function() {
             textElement.insertAdjacentElement("afterend", readMoreWrapper);
         }
     });
+
+    $(document).ready(function(){
+        var slider = $('.slider').slick({
+            arrows: false,
+            dots: true,
+            adaptiveHeight: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            speed: 600,
+            easing: 'easing',
+            infinite: true,
+            initialSlide: 0,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            pauseOnFocus: true,
+            pauseOnHover: true,
+            pauseOnDotsHover: true,
+            draggable: true,
+            swipe: true,
+            touchThreshold: 5,
+            touchMove: true,
+            waitForAnimate: true,
+            centerMode: true,
+            variableWidth: true
+        });
+    
+        $('.slider__item').on('click', function() {
+            var index = $(this).data('slick-index');
+            slider.slick('slickGoTo', index);
+        });
+    });
 });
 
