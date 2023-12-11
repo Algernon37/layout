@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const maxLength = 100; // Максимальная длина текста
-    const ellipsis = " ..."; // Строка с многоточием
+    const maxLength = 150; 
+    const ellipsis = " ..."; 
 
     const featuresTextElements = document.querySelectorAll(".features__text");
 
