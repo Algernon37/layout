@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const maxLength = 150; 
     const ellipsis = " ..."; 
-
     const featuresTextElements = document.querySelectorAll(".features__text");
-
     featuresTextElements.forEach(textElement => {
         const fullText = textElement.textContent;
         if (fullText.length > maxLength) {
@@ -17,17 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 textElement.textContent = fullText;
                 readMoreLink.style.display = "none"; 
             });
-
             const readMoreWrapper = document.createElement("div");
             readMoreWrapper.appendChild(readMoreLink);
-
             textElement.textContent = truncatedText;
             textElement.insertAdjacentElement("afterend", readMoreWrapper);
         }
     });
-
+    
     $(document).ready(function(){
-        var slider = $('.slider').slick({
+        let slider = $('.slider').slick({
             arrows: false,
             dots: true,
             adaptiveHeight: true,
@@ -52,13 +48,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     
         $('.slider__item').on('click', function() {
-            var index = $(this).data('slick-index');
+            let index = $(this).data('slick-index');
             slider.slick('slickGoTo', index);
         });
     });
 
     $(document).ready(function(){
-        var slider = $('.slider__news').slick({
+        let slider__news = $('.slider__news').slick({
             arrows: false,
             dots: true,
             adaptiveHeight: true,
@@ -81,10 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
             centerMode: true,
             variableWidth: true
         });
-    
         $('.slider-item').on('click', function() {
-            var index = $(this).data('slick-index');
-            slider.slick('slickGoTo', index);
+            let index__news = $(this).data('slick-index');
+            slider__news.slick('slickGoTo', index__news);
         });
     });
 });

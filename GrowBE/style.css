@@ -1274,7 +1274,7 @@ html,body{
     line-height: 150%; 
 }
 
-.liink__contact{
+.link__contact{
     color: #666;
     font-size: 16px;
     font-style: normal;
@@ -1282,7 +1282,7 @@ html,body{
     line-height: 150%;  
 }
 
-.liink__contact:hover{
+.link__contact:hover{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #F25822;
 }
@@ -1481,24 +1481,254 @@ html,body{
         transform: none;
     }
 
-    .page-team .team-items {
+    .team-items {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px; 
     }
+
     .team-item{
         width: 100%;
     }
+    
     .news-item {
         margin-right: 0px;
     }
+
     .card-test{
         margin:0px 15px;
     }
+
     .footer__label{
+        margin-bottom: 10px;
+    }
+
+    .footer__label {
         font-size: 20px;
+        margin-bottom: 5px;
     }
 }
-@media  (max-width: 985px){
+
+@media  (max-width: 690px){
+    .main-block__title{
+        font-size: 40px;
+    }
+
+    .about__us-image img{
+        margin: 0;
+        opacity: 0.5; 
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        opacity: 0.3;
+        filter: blur(2px);  
+    }
+
+    .about__us-title{
+        font-size: 30px;
+    }
+
+    .about__us-text{
+        color: #000;
+    }
+
+    .header-block-title,
+    .we__do-header-block-title,
+    .our__plans-title{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .header-block-sub-title,
+    .our__plans-sub-title,
+    .we__do-header-block-sub-title,
+    .mail__box-text,
+    .text__card-test,
+    .main-block__text,
+    .link__contact,
+    .contacts-footer__item,
+    .news-text{
+        font-size: 15px;
+    }
+
+    .we__do-header {
+        padding: 0;
+    }
+
+    .rectangle__items{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .message__box{
+        display: flex;
+        gap: 29px;
+        flex-direction: column;
+    }
+
+    .forms::before {
+        display: none;
+    }
+
+    .mail__box-title{
+        font-size: 35px;
+    }
+
+    .forms {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .web__form input,
+    .email__form input{
+        border-radius:30px;
+        width: 100%;
+    }
+
+    .body-our__plans-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our__plans-text {
+        font-size: 15px;
+        line-height: 150%;
+    }
+    
+    .team-header-block-sub-title,
+    .testimonials-header-block-sub-title,
+    .news-header-block-sub-title{
+        padding: 0px 60px;
+    }
+
+    .card-test{
+        width: 400px;
+    }
+
+    .img-news,
+    .img-news-big{
+        display: none;
+    }
+
+    .news-big,
+    .img-news-big{
+        display: none;
+    }
+
+    .news-item{
+        width: 400px;
+    }
+
+    .news-text{
+        color: #000;
+    }
+
+    .news-title{
+        font-size: 24px;
+    }
+
+    .footer__main{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer__column {
+        width: auto;
+        padding: 0px 15px;
+    }
+
+    .menu-footer__link{
+        font-size: 15px;
+    }
+
+    .footer__bottom-text{
+        font-size: 15px;
+    }
+}
+
+@media  (max-width: 350px){
+    .main-block__title{
+        font-size: 30px;
+    }
+
+    .main-block__text{
+        font-size: 17px;
+    }
+
+    .header-block-sub-title,
+    .our__plans-sub-title,
+    .we__do-header-block-sub-title,
+    .mail__box-text,
+    .text__card-test,
+    .about__us-text,
+    .features__text,
+    .choose__us-text,
+    .contacts-footer__item,
+    .footer__bottom-text,
+    .link__contact,
+    .news-text
+    {
+        font-size: 14px;
+    }
+
+    .we__do-title{
+        text-align: center;
+    }
+    
+    .we__do-text{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .our__plans-text{
+        font-size: 14px;
+    }
+
+    .header-block-title,
+    .we__do-header-block-title,
+    .our__plans-title{
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .about__us-title {
+        font-size: 25px;
+    }
+
+    .mail__box-title{
+        font-size: 25px;
+    }
+
+    .features__title,
+    .choose__us-title{
+        text-align: center;
+    }
+    
+    .team-header-block-sub-title,
+    .testimonials-header-block-sub-title,
+    .news-header-block-sub-title{
+        padding: 0;
+    }
+
+    .team-items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px; 
+    }
+
+    .card-test{
+        width: 320px;
+    }
+
+    .news-item{
+        width: 320px;
+    }
+
+    .body-news {
+        padding: 26px 10px 25px 10px;
+    }
 
 }
