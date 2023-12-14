@@ -70,6 +70,13 @@ html,body{
     align-items: center;
 } 
 
+.header.fixed{
+   position: fixed; 
+   background: #fafafa;
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+
 .header__logo{
     display: flex;
     justify-content: center;
@@ -141,40 +148,47 @@ html,body{
     cursor: pointer;
 }
 
-.burger{
+.burger
+{
     display: none;
 }
 
-.burger__item{
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #F25822;
-    font-size: 0;
-    color: transparent;
-    position: relative;
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 10px 0px rgba(242, 88, 34, 0.25);
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.burger__menu{
+    background-color: #FFF;
     cursor: pointer;
 }
 
-.burger__item:before,
-.burger__item::after{
-    content: "";
-    width: 100%;
-    height: 100%;
+.burger__menu .fixedImg{
+    background: #fafafa;
+}
+
+.nav.active {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    background: #fafafa;
     position: absolute;
-    left:0;
-    z-index: 1;
-    background-color: #000;
+    right: 0;
+    transform: translateY(0);
+    opacity: 1;
+    padding: 20px;
 }
 
-.burger__item:before{
-    top: -8px;
+.burger__item:not(:last-child){
+    margin-bottom: 10px;
 }
-
-.burger__item::after{
-    bottom: -8px;
-}
-
 
 /* ------------------main-block------------------ */
 
@@ -324,7 +338,7 @@ html,body{
 
 .about__us-text{
     color: #666;
-    font-size: 15px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -503,7 +517,7 @@ html,body{
 .choose__us-text{
     color: #AAA;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -1308,6 +1322,12 @@ html,body{
 /* <!-- /////////////////// Media /////////////////// --> */
 
 @media (max-width: 1200px){
+
+    .header{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     .main-block__image img{
         position: absolute;
         width: 100%;
@@ -1546,7 +1566,9 @@ html,body{
     .we__do-header-block-sub-title,
     .mail__box-text,
     .text__card-test,
+    .choose__us-text,
     .main-block__text,
+    .about__us-text,
     .link__contact,
     .contacts-footer__item,
     .news-text{
@@ -1602,6 +1624,10 @@ html,body{
     .testimonials-header-block-sub-title,
     .news-header-block-sub-title{
         padding: 0px 60px;
+    }
+
+    .team-item{
+        padding: 0px;
     }
 
     .card-test{

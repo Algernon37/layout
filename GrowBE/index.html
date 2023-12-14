@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&family=Roboto:ital,wght@0,500;1,100;1,500&display=swap" rel="stylesheet">
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="header">
             <div class="header__container container">
                 <a href="" class="header__logo">
                     <img class="header__logo" src="img/header/1.png" alt="Logo">   
@@ -20,38 +20,61 @@
                 <nav class="header__menu menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="" class="menu__link">Home</a>        
+                            <a href="" class="menu__link" data-scroll="#pageMainBlock">Home</a>        
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">About Us</a>        
+                            <a href="" class="menu__link" data-scroll="#AboutUs">About Us</a>        
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Services</a>        
+                            <a href="" class="menu__link" data-scroll="#Features">Features</a>        
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Features</a>        
+                            <a href="" class="menu__link" data-scroll="#Services">Services</a>        
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Team</a>        
+                            <a href="" class="menu__link" data-scroll="#Team">Team</a>        
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Blog</a>        
+                            <a href="" class="menu__link" data-scroll="#Blog">Blog</a>        
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Contact</a>        
+                            <a href="" class="menu__link" data-scroll="#Contact">Contact</a>        
                         </li>
                         <li class="menu__item menu__item--button">
                             <button type="submit" class="get-button">Get Started</button>
                         </li>
                     </ul>
                 </nav>
-                <button class="burger header__menu" type="button">
-                    <span class="burger__item">Menu</span>
-                </button>
+                <div class="burger header__menu" id="burgerMenu" role="button">
+                    <img class="burger__menu" src="img/header/burger.svg" alt="burger__menu">
+                    <nav class="nav" id="nav">
+                        <h1 class="burger__item">
+                            <a href="" class="menu__link" data-scroll="#pageMainBlock">Home</a>
+                        </h1>
+                        <h1 class="burger__item">
+                            <a href="" class="menu__link" data-scroll="#AboutUs">About Us</a>
+                        </h1>
+                        <h1 class="burger__item">
+                            <a href="" class="menu__link" data-scroll="#Features">Features</a>
+                        </h1>  
+                        <h1 class="burger__item">
+                            <a href="" class="menu__link" data-scroll="#Services">Services</a>
+                        </h1>  
+                        <h1 class="burger__item">
+                            <a href="" class="menu__link" data-scroll="#Team">Team</a>
+                        </h1> 
+                        <h1 class="burger__item">
+                            <a href="" class="menu__link" data-scroll="#Blog">Blog</a>
+                        </h1> 
+                        <h1 class="menu__item">
+                            <a href="" class="menu__link" data-scroll="#Contact">Contact</a>        
+                        </h1>
+                    </nav>
+                </div>
             </div>
         </header>
         <main class="page">
-            <section class="page__main-block">
+            <section class="page__main-block" id="pageMainBlock">
                 <div class="main-block__container container">
                     <div class="main-block__body">
                         <h1 class="main-block__title">
@@ -96,7 +119,7 @@
                     </div>
                 </div>
             </div> 
-            <section class="page-about__us">
+            <section class="page-about__us" id="AboutUs">
                 <img class="vector" src="img/about__us/element.svg" alt="vectors">
                 <div class="about__us-container container">
                     <div class="about__us-body">
@@ -115,7 +138,7 @@
                     </div>
                 </div>
             </section>
-            <section class="page__features">
+            <section class="page__features" id="Features">
                 <div class="features__container container">
                     <div class="features__items">
                         <div class="features__item icon1">
@@ -154,7 +177,7 @@
                     </div>
                 </div>
             </section>
-            <section class="page-choose__us">
+            <section class="page-choose__us" id="Services">
                 <div class="choose__us-container container">
                     <div class="choose__us-header header-block">
                         <h2 class="header-block-title">Why You Should Choose Us.</h2>
@@ -381,7 +404,7 @@
                     </div>
                 </div>
             </section>
-            <section class="page-team">
+            <section class="page-team" id="Team">
                 <div class="team-container container">
                     <div class="team-header header-block">
                         <h2 class="team-header-block-title header-block-title">Our Expert Team Members</h2>
@@ -557,7 +580,7 @@
                     </div>
                 </div>
             </section>
-            <section class="page-testimonials">
+            <section class="page-testimonials" id="Blog">
                 <div class="testimaonials-container ">
                     <div class="testimonials-header header-block">
                         <h2 class="header-block-title">Our Clients Say</h2>
@@ -758,7 +781,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <footer class="footer" id="Contact">
             <div class="footer__top">
                 <div class="footer__main container">
                     <div class="footer__column footer__column-first">

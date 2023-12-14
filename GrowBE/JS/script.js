@@ -1,27 +1,42 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const maxLength = 150; 
-    const ellipsis = " ..."; 
-    const featuresTextElements = document.querySelectorAll(".features__text");
-    featuresTextElements.forEach(textElement => {
-        const fullText = textElement.textContent;
-        if (fullText.length > maxLength) {
+    function addReadMoreFunctionality(maxLength, ellipsis, selector) {
+        const elements = document.querySelectorAll(selector);
+      
+        elements.forEach(textElement => {
+          const fullText = textElement.textContent;
+      
+          if (fullText.length > maxLength) {
             const truncatedText = fullText.substring(0, maxLength) + ellipsis;
+      
             const readMoreLink = document.createElement("a");
             readMoreLink.href = "#";
             readMoreLink.textContent = "Read More...";
             readMoreLink.style.color = "black";
-            readMoreLink.addEventListener("click", function(event) {
-                event.preventDefault();
-                textElement.textContent = fullText;
-                readMoreLink.style.display = "none"; 
+      
+            readMoreLink.addEventListener("click", function (event) {
+              event.preventDefault();
+              textElement.textContent = fullText;
+              readMoreLink.style.display = "none";
             });
+      
             const readMoreWrapper = document.createElement("div");
             readMoreWrapper.appendChild(readMoreLink);
+    
             textElement.textContent = truncatedText;
             textElement.insertAdjacentElement("afterend", readMoreWrapper);
-        }
-    });
-    
+          }
+        });
+    }
+    function setupBurgerMenu() {
+        const nav = document.getElementById("nav");
+        burgerMenu.addEventListener("click", function() {
+            nav.classList.toggle("active");
+        });
+    }
+    addReadMoreFunctionality(150, " ...", ".features__text");
+    setupBurgerMenu();
+ 
+
     $(document).ready(function(){
         let slider = $('.slider').slick({
             arrows: false,
@@ -80,6 +95,44 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.slider-item').on('click', function() {
             let index__news = $(this).data('slick-index');
             slider__news.slick('slickGoTo', index__news);
+        });
+    });
+
+    $(document).ready(function() {
+
+        // Fixed Header
+        let header = $("#header");
+        let burgerImg = $("#burgerImg");
+        let pageMainBlock = $("#pageMainBlock");
+        let pageMainBlockH = pageMainBlock.height();
+        let scrollPos = $(window).scrollTop();
+        checkScroll(scrollPos, pageMainBlockH);
+
+        $(window).on("scroll resize",function(){
+            pageMainBlockH = pageMainBlock.height();
+            scrollPos = $(this).scrollTop();
+            checkScroll(scrollPos, pageMainBlockH);
+        });
+
+        function checkScroll(scrollPos, pageMainBlockH){
+            if(scrollPos > pageMainBlockH){
+                header.addClass("fixed");
+                burgerImg.addClass("fixedImg")
+            } else {
+                header.removeClass("fixed");
+            }
+        }
+
+        // Smooth scroll
+        $("[data-scroll]").on("click", function(event){
+            event.preventDefault();
+
+            let elementID = $(this).data('scroll'); 
+            let elementOffset = $(elementID).offset().top;
+
+            $("html, body").animate({
+                scrollTop: elementOffset - 68
+            }, 700);
         });
     });
 });
