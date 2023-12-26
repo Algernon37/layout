@@ -612,7 +612,6 @@ p{
 
     /* nav */
     .nav{
-
         display: none;
         width: 100%;;
         flex-direction: column;
@@ -621,16 +620,10 @@ p{
         right: 0;
         text-align: right;
         background-color:#31344e;
-
-
     }
-
-
     .nav.show{
         display: flex;
     }
-
-
     .nav__link{
         padding: 9px 15px;
     }

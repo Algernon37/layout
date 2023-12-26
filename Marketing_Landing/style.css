@@ -130,6 +130,7 @@ header{
     line-height: normal; 
     text-decoration: none;
 }
+
 .nav__link:hover {
     text-decoration: underline;
     border-bottom: none;
