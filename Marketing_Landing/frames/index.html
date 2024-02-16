@@ -9,28 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
 <!-- /////////////////// Header /////////////////// -->
     <header>
         <div class="header__inner">
             <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="логотип" ></a>
+                <a href="index.html"><img src="../img/logo.png" alt="логотип" ></a>
                 <svg width="27" height="38" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.0589 17.6251C20.6705 15.865 21.6275 13.6039 21.769 11.2216C21.9106 8.83932 21.2281 6.48087 19.8362 4.54232C18.4443 2.60377 16.4278 1.20318 14.1252 0.575765C11.8227 -0.0516554 9.37437 0.132305 7.19143 1.09675C5.0085 2.0612 3.22389 3.74739 2.1373 5.87217C1.05071 7.99695 0.728322 10.4309 1.22426 12.7653C1.72021 15.0997 3.00428 17.1923 4.86085 18.6919C6.71741 20.1914 9.0334 21.0064 11.4199 21.0001C13.6723 21.0031 15.8638 20.2691 17.6599 18.9101L25.4079 26.7171C25.4934 26.8061 25.5958 26.8772 25.7091 26.9261C25.8225 26.9751 25.9444 27.0009 26.0679 27.0021C26.1916 27.0024 26.314 26.9773 26.4276 26.9283C26.5411 26.8793 26.6434 26.8074 26.7279 26.7171C26.9018 26.5362 26.999 26.295 26.999 26.0441C26.999 25.7931 26.9018 25.5519 26.7279 25.371L19.0589 17.6251ZM2.88589 10.5001C2.89873 8.81477 3.41021 7.17101 4.35586 5.776C5.30151 4.38098 6.63899 3.29715 8.1997 2.66114C9.76042 2.02513 11.4745 1.86542 13.1258 2.20213C14.7772 2.53884 16.2919 3.3569 17.479 4.55319C18.6661 5.74948 19.4725 7.27044 19.7965 8.92433C20.1204 10.5782 19.9475 12.291 19.2995 13.8468C18.6515 15.4026 17.5574 16.7316 16.1551 17.6665C14.7529 18.6014 13.1052 19.1002 11.4199 19.1C9.14843 19.0892 6.97409 18.1775 5.3741 16.5652C3.77412 14.9528 2.87924 12.7715 2.88589 10.5001Z" fill="#E8E8E8"/>
                 </svg>   
             </div>
             <div class="button__copy">
 <!-- /////////////////// Burger__menu /////////////////// -->
-                <div class="burger__menu" id="burgerMenu">
-                    <svg class="burger" width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8"/>
-                    </svg>
+                <div class="burger" id="burgerMenu">
+                    <div class="burger__menu">
+                        <svg  width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path  d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8"/>
+                        </svg>
+                    </div>
                     <nav class="nav" id="nav">
                         <h1 class="burger__title">MENU</h1>
                         <h1 class="burger__titles">MAN</h1>
                         <div class="burger__links">
+                            <a class="nav__link new__arrivals" href="#">NEW ARRIVALS</a>
                             <a class="nav__link" href="#">Accessories</a>
                             <a class="nav__link" href="#">Bags</a>
                             <a class="nav__link" href="#">Denim</a>
@@ -67,7 +70,7 @@
     </header>
 <!-- /////////////////// Intro /////////////////// --> 
     <div class="intro">
-        <img src="img/intro1.png" alt="photo__intro" class="intro__img">
+        <img src="../img/intro1.png" alt="photo__intro" class="intro__img">
         <div class="intro__content">
             <div class="intro__info">
                 <div class="intro__text">
@@ -81,19 +84,19 @@
     <div class="offer">
         <div class="offer__inner">
             <div class="offer__cards">
-                <img src="img/for__women.png" alt="женщина">
+                <img src="../img/for__women.png" alt="женщина">
                 <p class="offer__text"><span class="Typography__offer">30% OFF</span><br> <span class="for">FOR WOMEN</span></p>
             </div>
             <div class="offer__cards">
-                <img src="img/for__men.jpg" alt="мужчина">
+                <img src="../img/for__men.jpg" alt="мужчина">
                 <p class="offer__text"><span class="Typography__offer">HOT DEAL</span><br> <span class="for">FOR MEN</span></p>
             </div>
             <div class="offer__cards">
-                <img src="img/for__kids.jpg" alt="ребёнок">
+                <img src="../img/for__kids.jpg" alt="ребёнок">
                 <p class="offer__text"><span class="Typography__offer">NEW ARRIVALS</span><br> <span class="for">FOR KIDS</span></p>
             </div>
             <div class="offer__big__card">
-                <img src="img/accesories.jpg" alt="аксессуары">
+                <img src="../img/accesories.jpg" alt="аксессуары">
                 <p class="offer__text"><span class="Typography__offer">LUXIROUS & TRENDY</span><br> <span class="for">ACCESORIES</span></p>
             </div>
         </div>
@@ -107,7 +110,7 @@
         <div class="products__inner">  
             <a class="products__cards" id="productCardLink">
                 <div class="image-container">
-                    <img src="img/1_cards.jpg" alt="1_cards" class="products__photo">
+                    <img src="../img/1_cards.jpg" alt="1_cards" class="products__photo">
                     <div class="overlay">
                             <button class="centered-button" id="cartButton">
                                 <svg class="cart" width="26" height="24" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +127,7 @@
             </a>
             <div class="products__cards">
                 <div class="image-container">
-                    <img src="img/2_cards.jpg" alt="1_cards" class="products__photo">
+                    <img src="../img/2_cards.jpg" alt="1_cards" class="products__photo">
                     <div class="overlay">
                         <button class="centered-button">
                             <svg class="cart" width="26" height="24" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +143,7 @@
             </div>
             <div class="products__cards">
                 <div class="image-container">
-                    <img src="img/3_cards.jpg" alt="1_cards" class="products__photo">
+                    <img src="../img/3_cards.jpg" alt="1_cards" class="products__photo">
                     <div class="overlay">
                         <button class="centered-button">
                             <svg class="cart" width="26" height="24" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +159,7 @@
             </div>
             <div class="products__cards">
                 <div class="image-container">
-                    <img src="img/4_cards.jpg" alt="1_cards" class="products__photo">
+                    <img src="../img/4_cards.jpg" alt="1_cards" class="products__photo">
                     <div class="overlay">
                         <button class="centered-button">
                             <svg class="cart" width="26" height="24" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -172,7 +175,7 @@
             </div>
             <div class="products__cards">
                 <div class="image-container">
-                    <img src="img/5_cards.jpg" alt="1_cards" class="products__photo">
+                    <img src="../img/5_cards.jpg" alt="1_cards" class="products__photo">
                     <div class="overlay">
                         <button class="centered-button">
                             <svg class="cart" width="26" height="24" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +191,7 @@
             </div>
             <div class="products__cards">
                 <div class="image-container">
-                    <img src="img/6_cards.jpg" alt="1_cards" class="products__photo">
+                    <img src="../img/6_cards.jpg" alt="1_cards" class="products__photo">
                     <div class="overlay">
                         <button class="centered-button">
                             <svg class="cart" width="26" height="24" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -236,7 +239,7 @@
                 <p class="about__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>   
             </article>
         </section> 
-        <section class="subsribe">
+        <section class="subscribe">
             <div class="subscribe__inner">
                 <article class="subscribe__info">
                     <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -313,7 +316,7 @@
             </div>
         </section>
     </footer>
-<script src="app.js"></script>
+<script src="../app.js"></script>
 </body>
 </html>
 

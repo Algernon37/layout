@@ -35,7 +35,7 @@ a {
 header {
   display: flex;
   justify-content: center;
-  background-color: #222222;
+  background-color: #222;
   width: 100%;
   height: 75px;
   flex-shrink: 0;
@@ -50,37 +50,25 @@ header {
 
 .logo {
   justify-content: center;
-  align-items: center;
   display: flex;
+  align-items: center;
   gap: 41px;
   padding-left: 32px;
   cursor: pointer;
 }
 
 .button__copy {
-  align-items: center;
   display: flex;
+  align-items: center;
   gap: 25px;
   padding-right: 32px;
 }
 
-.men {
-  cursor: pointer;
-}
-
-.basket {
+.men, .basket {
   cursor: pointer;
 }
 
 /* <!-- /////////////////// Burger__menu /////////////////// --> */
-.burger__jpg {
-  cursor: pointer;
-}
-
-.nav {
-  display: none;
-}
-
 .nav.active {
   display: flex;
   width: 15%;
@@ -103,7 +91,6 @@ header {
   line-height: normal;
   margin-bottom: 4px;
 }
-
 .burger__titles {
   color: #F16D7F;
   font-family: "Lato", sans-serif;
@@ -114,7 +101,13 @@ header {
   padding-top: 20px;
   padding-bottom: 12px;
 }
+.burger__menu {
+  cursor: pointer;
+}
 
+.nav {
+  display: none;
+}
 .nav__link {
   color: #6F6E6E;
   font-family: "Lato", sans-serif;
@@ -124,10 +117,13 @@ header {
   line-height: normal;
   text-decoration: none;
 }
-
 .nav__link:hover {
   text-decoration: underline;
   border-bottom: none;
+}
+
+.new__arrivals {
+  color: #F16D7F;
 }
 
 .burger__links {
@@ -150,17 +146,14 @@ header {
   width: 100%;
   margin-bottom: 65px;
 }
-
 .intro__img {
   width: 50%;
 }
-
 .intro__info {
   border-left: 12px solid #F16D7F;
   padding-left: 16px;
   margin-top: 70%;
 }
-
 .intro__content {
   padding-left: 64px;
 }
@@ -196,7 +189,6 @@ header {
 .offer {
   margin-bottom: 95px;
 }
-
 .offer__inner {
   width: 1140px;
   margin: 0 auto;
@@ -204,13 +196,11 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
-
 .offer__cards {
   position: relative;
   width: 100%;
   cursor: pointer;
 }
-
 .offer__text {
   position: absolute;
   top: 50%;
@@ -219,7 +209,6 @@ header {
   text-align: center;
   white-space: nowrap;
 }
-
 .offer__big__card {
   position: relative;
   grid-column: 1/-1;
@@ -249,22 +238,19 @@ header {
 .products {
   margin-bottom: 48px;
 }
-
 .products__start {
   text-align: center;
   justify-content: center;
   margin-bottom: 48px;
 }
-
 .products__title {
-  color: #222;
+  color: 1140px;
   font-family: "Lato", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-
 .products__text {
   color: #9F9F9F;
   font-family: "Lato", sans-serif;
@@ -273,7 +259,6 @@ header {
   font-weight: 400;
   line-height: normal;
 }
-
 .products__inner {
   width: 1140px;
   margin: 0 auto;
@@ -281,7 +266,6 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
-
 .products__cards {
   background-color: #F8F8F8;
 }
@@ -327,7 +311,6 @@ header {
   cursor: pointer;
   background: transparent;
 }
-
 .centered-button:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
@@ -385,24 +368,21 @@ header {
   border: solid 1px #FF6A6A;
   transition: background-color 0.3s ease;
 }
-
 .button:hover {
   background-color: #f34058;
   animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
 .button__text {
   padding: 14px 39px 15px 39px;
   color: #F26376;
 }
-
 .button:hover .button__text {
   color: #FFFFFF;
 }
 
 /* <!-- /////////////////// Footer /////////////////// --> */
 footer {
-  background-color: #222224;
+  background-color: #222;
 }
 
 .about__inner {
@@ -440,13 +420,12 @@ footer {
   line-height: normal;
 }
 
-.subsribe {
+.subscribe {
   background-image: url(background.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 448px;
 }
-
 .subscribe__inner {
   display: flex;
   height: 100%;
@@ -456,7 +435,6 @@ footer {
   align-items: center;
   gap: 20%;
 }
-
 .subscribe__info {
   display: flex;
   flex-direction: column;
@@ -464,26 +442,6 @@ footer {
   width: 360px;
   gap: 30px;
 }
-
-.Typography__subscribe {
-  color: #222224;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.pulvinar {
-  color: #222224;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: normal;
-}
-
 .subscribe__email {
   display: flex;
   flex-direction: column;
@@ -491,14 +449,12 @@ footer {
   width: 557px;
   gap: 32px;
 }
-
 .subscribe__container__email {
   position: relative;
   width: 320px;
   height: 49px;
   display: flex;
 }
-
 .subscribe__form {
   position: absolute;
   top: 0;
@@ -508,9 +464,45 @@ footer {
   display: flex;
   align-items: center;
 }
+.subscribe__form input {
+  flex: 1;
+  padding: 10px;
+  padding: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.subscribe__title {
+  color: #222;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 167.2%;
+}
+
+.Typography__subscribe {
+  color: #222;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pulvinar {
+  color: #222;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
 
 input[type=email]::-moz-placeholder {
-  color: #222224;
+  color: #222;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -519,17 +511,12 @@ input[type=email]::-moz-placeholder {
 }
 
 input[type=email]::placeholder {
-  color: #222224;
+  color: #222;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.subscribe__form input {
-  flex: 1;
-  padding: 10px;
 }
 
 .subscribe_bt {
@@ -560,25 +547,8 @@ input[type=email]::placeholder {
   animation: none;
 }
 
-.subscribe__form input {
-  padding: 20px;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-
-.subsribe__title {
-  color: #222224;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 167.2%;
-}
-
 .for__our {
-  color: #222224;
+  color: #222;
   font-family: "Lato", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -633,11 +603,6 @@ input[type=email]::placeholder {
 
 /* <!-- /////////////////// Media /////////////////// --> */
 @media (min-width: 768px) and (max-width: 1140px) {
-  .intro__img {
-    margin-top: 11%;
-    width: 50%;
-    height: 50%;
-  }
   .header {
     width: 100%;
   }
@@ -652,8 +617,7 @@ input[type=email]::placeholder {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
   }
-  .offer__cards img,
-  .offer__big__card img {
+  .offer__cards img, .offer__big__card img {
     max-width: 100%;
     height: auto;
   }
@@ -721,19 +685,19 @@ input[type=email]::placeholder {
     grid-gap: 48px;
   }
   .subsribe {
-    background-image: url(background.png);
+    background-image: url(/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 693px;
   }
-  .subscribe__email {
+  .subsribe__email {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 360px;
     gap: 32px;
   }
-  .subscribe__inner {
+  .subsribe__inner {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -743,7 +707,7 @@ input[type=email]::placeholder {
     align-items: center;
     gap: 20%;
   }
-  .subscribe__info {
+  .subsribe__info {
     margin-top: 64px;
     display: flex;
     flex-direction: column;
@@ -794,8 +758,7 @@ input[type=email]::placeholder {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
   }
-  .offer__cards img,
-  .offer__big__card img {
+  .offer__cards img, .offer__big__card img {
     max-width: 100%;
     height: auto;
   }
@@ -832,8 +795,7 @@ input[type=email]::placeholder {
   .offer__big__card img {
     height: 111px;
   }
-  .men,
-  .basket {
+  .men, .basket {
     display: none;
   }
   .Typography {
@@ -871,20 +833,20 @@ input[type=email]::placeholder {
     grid-gap: 48px;
   }
   .subsribe {
-    background-image: url(background.png);
+    background-image: url(/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 550px;
     padding-bottom: 110px;
   }
-  .subscribe__email {
+  .subsribe__email {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 320px;
     gap: 32px;
   }
-  .subscribe__inner {
+  .subsribe__inner {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -894,7 +856,7 @@ input[type=email]::placeholder {
     align-items: center;
     gap: 20%;
   }
-  .subscribe__info {
+  .subsribe__info {
     margin-top: 64px;
     display: flex;
     flex-direction: column;

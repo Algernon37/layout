@@ -1,3 +1,6 @@
+@import 'vars'
+@import 'mixins'
+
 @keyframes shadow-pop-br
     0%
         -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e
@@ -26,7 +29,7 @@
     border: 0
 
 body
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
 
 a
     cursor: pointer
@@ -42,14 +45,15 @@ header
     height: 75px
     flex-shrink: 0
 
-    &__inner
-        @include flexCenter
-        justify-content: space-between
-        width: $widthSite
+.header__inner
+    @include flexCenter
+    justify-content: space-between
+    width: $widthSite
 
 .logo
     justify-content: center
-    @include flexCenter
+    display: flex
+    align-items: center
     gap: 41px
     padding-left: 32px
     cursor: pointer
@@ -59,13 +63,10 @@ header
     gap: 25px
     padding-right: 32px
 
-.men, .basket, .burger
+.men, .basket
     cursor: pointer
 
 /* <!-- /////////////////// Burger__menu /////////////////// --> */
-
-.nav
-    display: none
 
 .nav.active
     display: flex
@@ -79,29 +80,34 @@ header
     padding-left: 33px
     padding-top: 32px
 
-.burger__title
-    color: #000
-    font-family: 'Lato', sans-serif
-    font-size: 14px
-    font-style: normal
-    font-weight: 700
-    line-height: normal
-    margin-bottom: 4px
+.burger
+    &__title
+        color: #000
+        font-family: $mainFont, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        margin-bottom: 4px
 
-.burger__titles
-    color: #F16D7F
-    font-family: 'Lato', sans-serif
-    font-size: 14px
-    font-style: normal
-    font-weight: 400
-    line-height: normal
-    padding-top: 20px
-    padding-bottom: 12px
+    &__titles
+        color: #F16D7F
+        font-family: $mainFont, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        padding-top: 20px
+        padding-bottom: 12px
 
-nav
+    &__menu
+        cursor: pointer
+
+.nav
+    display: none
     &__link
         color: #6F6E6E
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 14px
         font-style: normal
         font-weight: 400
@@ -111,6 +117,9 @@ nav
     &__link:hover
         text-decoration: underline
         border-bottom: none
+
+.new__arrivals
+    color: #F16D7F
 
 .burger__links
     display: flex
@@ -144,7 +153,7 @@ nav
 
 .Typography
     color: $mainColor
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 48px
     font-style: normal
     font-weight: 900
@@ -152,7 +161,7 @@ nav
 
 .Of_luxerious
     color: $mainColor
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 32px
     font-style: normal
     font-weight: 700
@@ -160,7 +169,7 @@ nav
 
 .Fashion
     color: #F16D7F
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 32px
     font-style: normal
     font-weight: 700
@@ -199,7 +208,7 @@ nav
 .Typography__offer
     color: #FFF
     text-align: center
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 16px
     font-style: normal
     font-weight: 400
@@ -207,7 +216,7 @@ nav
 
 .for
     color: #F16D7F
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 24px
     font-style: normal
     font-weight: 700
@@ -225,7 +234,7 @@ nav
 
     &__title
         color: $widthSite
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 30px
         font-style: normal
         font-weight: 400
@@ -233,7 +242,7 @@ nav
 
     &__text
         color: #9F9F9F
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 14px
         font-style: normal
         font-weight: 400
@@ -276,7 +285,7 @@ nav
     align-items: center
     padding: 10px 20px
     color: #FFFFFF
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 14px
     font-style: normal
     font-weight: 400
@@ -301,7 +310,7 @@ nav
 
 .cards__title
     color: #000
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 13px
     font-style: normal
     font-weight: 400
@@ -309,7 +318,7 @@ nav
 
 .cards__text
     color: #5D5D5D
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 14px
     font-style: normal
     font-weight: 300
@@ -317,7 +326,7 @@ nav
 
 .cards__price
     color: #F16D7F
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 16px
     font-style: normal
     font-weight: 400
@@ -325,17 +334,17 @@ nav
 
 /* <!-- /////////////////// Button /////////////////// --> */
 
+.button__container
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 60px
+
 .button
     cursor: pointer
     background-color: #FFFFFF
     border: solid 1px #FF6A6A
     transition: background-color 0.3s ease
-
-    &__container
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-bottom: 60px
 
     &:hover
         background-color: #f34058
@@ -369,7 +378,7 @@ footer
 .about__title
     margin: 29px 0 16px 0
     color: #FBFBFB
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 19.96px
     font-style: normal
     font-weight: 400
@@ -378,14 +387,14 @@ footer
 .about__text
     color: #FBFBFB
     text-align: center
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 13.972px
     font-style: normal
     font-weight: 300
     line-height: normal
 
-.subsribe
-    background-image: url(/background.png)
+.subscribe
+    background-image: url(background.png)
     background-size: cover
     background-repeat: no-repeat
     height: 448px
@@ -407,18 +416,18 @@ footer
         gap: 30px
 
     &__email
-    display: flex
-    flex-direction: column
-    align-items: center
-    width: 557px
-    gap: 32px
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 557px
+        gap: 32px
 
     &__container__email
         position: relative
         width: 320px
         height: 49px
         display: flex
-        
+
     &__form
         position: absolute
         top: 0
@@ -439,7 +448,7 @@ footer
     &__title
         color: $mainColor
         text-align: center
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 24px
         font-style: normal
         font-weight: 700
@@ -448,7 +457,7 @@ footer
 .Typography__subscribe
     color: $mainColor
     text-align: center
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 20px
     font-style: normal
     font-weight: 400
@@ -456,22 +465,20 @@ footer
 
 .pulvinar
     color: $mainColor
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 20px
     font-style: italic
     font-weight: 400
     line-height: normal
 
-
 input[type="email"]::placeholder
 
     color: $mainColor
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 14px
     font-style: normal
     font-weight: 400
     line-height: normal
-
 
 .subscribe_bt
     height: 100%
@@ -480,7 +487,7 @@ input[type="email"]::placeholder
     background-color: #E05C6E
     color: #FFF
     text-align: center
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 14px
     font-style: normal
     font-weight: 400
@@ -498,10 +505,9 @@ input[type="email"]::placeholder
 .subscribe_bt:active
     animation: none
 
-
 .for__our
     color: $mainColor
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 18px
     font-style: normal
     font-weight: 400
@@ -525,7 +531,7 @@ input[type="email"]::placeholder
     padding-top: 30px
     padding-bottom: 30px
     color: #FBFBFB
-    font-family: 'Lato', sans-serif
+    font-family: $mainFont, sans-serif
     font-size: 16px
     font-style: normal
     font-weight: 400
@@ -600,7 +606,7 @@ input[type="email"]::placeholder
 
     .Typography
         color: #222
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 44px
         font-style: normal
         font-weight: 900
@@ -608,7 +614,7 @@ input[type="email"]::placeholder
 
     .Of_luxerious
         color: #222
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 24px
         font-style: normal
         font-weight: 700
@@ -616,7 +622,7 @@ input[type="email"]::placeholder
 
     .Fashion
         color: #F16D7F
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 24px
         font-style: normal
         font-weight: 700
@@ -749,7 +755,7 @@ input[type="email"]::placeholder
 
     .Typography
         color: $mainColor
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 38px
         font-style: normal
         font-weight: 900
@@ -757,7 +763,7 @@ input[type="email"]::placeholder
 
     .Of_luxerious
         color: $mainColor
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 20px
         font-style: normal
         font-weight: 700
@@ -765,7 +771,7 @@ input[type="email"]::placeholder
 
     .Fashion
         color: #F16D7F
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 20px
         font-style: normal
         font-weight: 700
@@ -833,7 +839,7 @@ input[type="email"]::placeholder
         padding-bottom: 0
         margin-bottom: 9px
         color: #FBFBFB
-        font-family: 'Lato', sans-serif
+        font-family: $mainFont, sans-serif
         font-size: 16px
         font-style: normal
         font-weight: 400
