@@ -1,0 +1,584 @@
+@import 'vars'
+@import 'mixins'
+
+@keyframes shadow-pop-br 
+  0% 
+    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e
+    transform: translateX(0) translateY(0)
+  
+  100% 
+    box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e
+    transform: translateX(-8px) translateY(-8px)
+  
+
+@keyframes shadow-drop-center 
+  0% 
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+  
+  100% 
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5)
+  
+
+*
+    margin: 0
+    padding: 0
+
+summary
+    display: block
+
+summary::-webkit-details-marker
+    display: none
+
+body
+    font-family: 'lato', sans-serif
+
+a
+    text-decoration: none
+
+.center
+    padding-left: calc(50% - $widthSite / 2)
+    padding-right: calc(50% - $widthSite / 2)
+
+header
+    display: flex
+    justify-content: center
+    background-color: $mainColor
+    width: 100%
+    height: 75px
+    flex-shrink: 0
+
+.header__inner
+    @include flexCenter
+    justify-content: space-between
+    width: $widthSite
+
+.logo
+    justify-content: center
+    display: flex
+    align-items: center
+    gap: 41px
+    padding-left: 32px
+    cursor: pointer
+
+.button__copy
+    @include flexCenter
+    gap: 25px
+    padding-right: 32px
+
+.men, .basket
+    cursor: pointer
+
+.nav.active
+    display: flex
+    width: 15%
+    flex-direction: column
+    background-color: #FFFFFF
+    position: absolute
+    top: 75px
+    right: 0
+    z-index: 1
+    padding-left: 33px
+    padding-top: 32px
+
+.burger
+    &__title
+        color: #000
+        font-family: $mainFont, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        margin-bottom: 4px
+
+    &__titles
+        color: #F16D7F
+        font-family: $mainFont, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        padding-top: 20px
+        padding-bottom: 12px
+
+    &__menu
+        cursor: pointer
+
+.nav
+    display: none
+    &__link
+        color: #6F6E6E
+        font-family: $mainFont, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        text-decoration: none
+
+    &__link:hover
+        color: $colorSelectSite
+        border-bottom: none
+
+.new__arrivals
+    color: #F16D7F
+
+.burger__links
+    display: flex
+    flex-direction: column
+    padding-left: 25px
+    gap: 11px
+
+.burger__links:last-child
+    padding-bottom: 32px
+
+.filter-sort
+    height: 132px
+    position: relative
+    display: flex
+    gap: $gapGrid
+
+.filter
+    z-index: 10
+    padding: 13px 16px 16px
+    width: 360px
+    box-sizing: border-box
+    position: absolute
+    top: 38px
+
+    &[open]
+        background: #FFF
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+    &[open] &__head
+        color: $colorSelectSite
+
+    &[open] path
+        fill: $colorSelectSite
+
+    & path
+        cursor: pointer
+
+    &__summary
+        gap: 11px
+
+    &__head
+        color: $colorName
+        cursor: pointer
+        font-size: 14px
+        font-weight: 600
+        line-height: 17px
+        letter-spacing: 0em
+        text-align: left
+        margin-right: 11px
+
+    &__item
+        margin-top: 16px
+
+        &[open] .filter__heading
+            color: $colorSelectSite
+
+    &__heading
+        display: flex
+        align-items: center
+        cursor: pointer
+        color: $colorText
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        letter-spacing: 0em
+        text-align: left
+        padding: 8px 11px 11px 11px
+        border-bottom: 1px solid #EBEBEB
+        border-left: 5px solid $colorSelectSite
+
+    &__item[open] .filter__heading
+        color: $colorSelectSite
+
+    &__link-box
+        display: flex
+        flex-direction: column
+        gap: 11px
+        padding: 24px 16px 24px 16px
+
+    &__link
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        text-align: left
+        color: $colorText
+        &:hover
+            color: $colorSelectSite
+
+.sort
+    display: flex
+    margin-left: 490px
+    margin-top: 51px
+    gap: 28px
+
+    &__check
+        display: flex
+        gap: 6px
+        align-items: center
+        font-family: Roboto
+        font-size: 14px
+        font-weight: 400
+        line-height: 16px
+        text-align: left
+
+    &__summary
+        display: flex
+        align-items: center
+        position: relative
+        gap: 10px
+        cursor: pointer
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        text-align: left
+        &:hover
+            color: $colorSelectSite
+        &:hover path
+            fill: $colorSelectSite
+
+    &__box
+        z-index: 10
+        margin-top: 5px
+        position: absolute
+        margin-left: -10px
+        background: #fff
+        box-shadow: 6px 4px 35px rgba(0,0,0,0.21)
+        padding: 7px 30px 11px 9px
+
+.header
+    background-color: $backBlock
+    padding-top: 20px
+    padding-bottom: 20px
+
+    &__left
+        display: flex
+        align-items: center
+        gap: 41px
+
+.top-head
+    background: #F8F3F4
+    padding-top: 60px
+    padding-bottom: 60px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__heading
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: $colorSelectSite
+
+.breadcrumbs__link
+    font-size: 14px
+    font-weight: 300
+    line-height: 17px
+    color: #636363
+
+    &:hover
+        color: $colorSelectSite
+
+.products
+    margin-bottom: 48px
+
+    &__start
+        text-align: center
+        justify-content: center
+        margin-bottom: 48px
+
+    &__title
+        color: $widthSite
+        font-family: $mainFont, sans-serif
+        font-size: 30px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+    &__text
+        color: #9F9F9F
+        font-family: $mainFont, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+    &__inner
+        width: $widthSite
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 30px
+
+    &__cards
+        background-color: #F8F8F8
+
+.image-container
+    position: relative
+    display: inline-block
+
+.products__photo img
+    display: block
+    width: 100%
+    height: auto
+
+.overlay
+    position: absolute
+    top: -3px
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(58, 56, 56, 0.6)
+    opacity: 0
+    transition: opacity 0.3s ease
+    display: flex
+    justify-content: center
+    align-items: center
+
+.centered-button
+    display: flex
+    align-items: center
+    padding: 10px 20px
+    color: #FFFFFF
+    font-family: $mainFont, sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    opacity: 1
+    border: solid 1px
+    font-size: 16px
+    cursor: pointer
+    background: transparent
+
+    &:hover
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8)
+
+.image-container:hover .overlay
+    opacity: 1
+
+.cards__info
+    padding: 24px 16px
+
+.cards__text
+    margin: 16px 0
+
+.cards__title
+    color: #000
+    font-family: $mainFont, sans-serif
+    font-size: 13px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+.cards__text
+    color: #5D5D5D
+    font-family: $mainFont, sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 300
+    line-height: normal
+
+.cards__price
+    color: $colorSelectSite
+    font-family: $mainFont, sans-serif
+    font-size: 16px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+footer
+    background-color: $mainColor
+
+.about__inner
+    height: 341px
+    align-items: center
+    width: $widthSite
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 30px
+
+.about__cards
+    align-self: center
+    text-align: center
+
+.about__title
+    margin: 29px 0 16px 0
+    color: #FBFBFB
+    font-family: $mainFont, sans-serif
+    font-size: 19.96px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+.about__text
+    color: #FBFBFB
+    text-align: center
+    font-family: $mainFont, sans-serif
+    font-size: 13.972px
+    font-style: normal
+    font-weight: 300
+    line-height: normal
+
+.subscribe
+    background-image: url(background.png)
+    background-size: cover
+    background-repeat: no-repeat
+    height: 448px
+
+    &__inner
+        display: flex
+        height: 100%
+        width: $widthSite
+        margin: 0 auto
+        text-align: center
+        align-items: center
+        gap: 20%
+
+    &__info
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 360px
+        gap: 30px
+
+    &__email
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 557px
+        gap: 32px
+
+    &__container__email
+        position: relative
+        width: 320px
+        height: 49px
+        display: flex
+
+    &__form
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+
+    &__form input
+        flex: 1
+        padding: 10px
+        padding: 20px
+        background: transparent
+        border: none
+        outline: none
+
+    &__title
+        color: $mainColor
+        text-align: center
+        font-family: $mainFont, sans-serif
+        font-size: 24px
+        font-style: normal
+        font-weight: 700
+        line-height: 167.2%
+
+.Typography__subscribe
+    color: $mainColor
+    text-align: center
+    font-family: $mainFont, sans-serif
+    font-size: 20px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+.pulvinar
+    color: $mainColor
+    font-family: $mainFont, sans-serif
+    font-size: 20px
+    font-style: italic
+    font-weight: 400
+    line-height: normal
+
+input[type="email"]::placeholder
+
+    color: $mainColor
+    font-family: $mainFont, sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+.subscribe_bt
+    height: 100%
+    width: 100%
+    display: block
+    background-color: $colorSelectSite
+    color: #FFF
+    text-align: center
+    font-family: $mainFont, sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    border: none
+    padding: 0
+    cursor: pointer
+    border-radius: 0 20px 20px 0
+    transition: background-color 0.3s ease
+    animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both
+
+.subscribe_bt:hover
+    background-color: $colorSelectSite
+
+.subscribe_bt:active
+    animation: none
+
+.for__our
+    color: $mainColor
+    font-family: $mainFont, sans-serif
+    font-size: 18px
+    font-style: normal
+    font-weight: 400
+    line-height: 167.2%
+
+.copyright__inner
+    display: flex
+    height: 100%
+    width: $widthSite
+    margin: 0 auto
+    justify-content: space-between
+
+.social__container
+    display: flex
+    gap: 7.29px
+    margin-top: 24px
+    margin-bottom: 24px
+    cursor: pointer
+
+.text__copyright
+    padding-top: 30px
+    padding-bottom: 30px
+    color: #FBFBFB
+    font-family: $mainFont, sans-serif
+    font-size: 16px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+.social
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 30px
+    width: 30px
+    background-color: white
+    transition: background-color 0.3s ease
+
+.social:hover
+    background-color: $colorSelectSite
+
+.social:hover path
+    fill: #FFFFFF
+
