@@ -76,6 +76,7 @@ header {
 
 
 .nav.active {
+  box-shadow: 6px 4px 35px rgba(0,0,0,0.21);
   display: flex;
   width: 15%;
   flex-direction: column;
@@ -466,6 +467,40 @@ footer {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+
+.pagination{
+  border: 1px solid #EBEBEB;
+  margin: 0 auto;
+  margin-top:48px;
+  margin-bottom:96px;
+  width:284px;
+}
+
+.arrow{
+  cursor:pointer
+}
+
+.pagination__inner{
+  padding:12px 40px 13px 40px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap:10px;
+}
+
+.page-number{
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color:#C4C4C4;
+}
+
+.page-number:hover{
+  color: #F16D7F;
 }
 
 .subscribe {
