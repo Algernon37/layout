@@ -1441,7 +1441,6 @@ html,body{
 }    
 
 @media  (max-width: 985px){
-
     .menu{
         display: none;
     }
@@ -1530,6 +1529,10 @@ html,body{
 }
 
 @media  (max-width: 690px){
+    .nav.active{
+        width: 30%;
+    }
+
     .main-block__title{
         font-size: 40px;
     }
@@ -1676,6 +1679,11 @@ html,body{
 }
 
 @media  (max-width: 350px){
+
+    .nav.active{
+        width: 35%;
+    }
+
     .main-block__title{
         font-size: 30px;
     }
