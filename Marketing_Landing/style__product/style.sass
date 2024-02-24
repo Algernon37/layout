@@ -3,39 +3,41 @@
 
 @keyframes shadow-pop-br
     0%
+        -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e
         box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e
+        -webkit-transform: translateX(0) translateY(0)
         transform: translateX(0) translateY(0)
 
     100%
+        -webkit-box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e
         box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e
+        -webkit-transform: translateX(-8px) translateY(-8px)
         transform: translateX(-8px) translateY(-8px)
 
 @keyframes shadow-drop-center
     0%
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
 
     100%
-        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5)
+        -webkit-box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.50)
+        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.50)
 
 *
     margin: 0
     padding: 0
-
-summary
-    display: block
-
-summary::-webkit-details-marker
-    display: none
+    border: 0
 
 body
-    font-family: 'lato', sans-serif
+    font-family: $mainFont, sans-serif
 
 a
+    cursor: pointer
     text-decoration: none
 
 .center
-    padding-left: calc(50% - $widthSite / 2)
-    padding-right: calc(50% - $widthSite / 2)
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
 
 header
     display: flex
@@ -44,11 +46,6 @@ header
     width: 100%
     height: 75px
     flex-shrink: 0
-
-header.fixed
-    position: fixed
-    z-index: 10
-    background-color: $mainColor
 
 .header__inner
     @include flexCenter
@@ -72,7 +69,6 @@ header.fixed
     cursor: pointer
 
 .nav.active
-    box-shadow: 6px 4px 35px rgba(0,0,0,0.21)
     display: flex
     width: 15%
     flex-direction: column
@@ -95,7 +91,7 @@ header.fixed
         margin-bottom: 4px
 
     &__titles
-        color: #F16D7F
+        color: $colorSelectSite
         font-family: $mainFont, sans-serif
         font-size: 14px
         font-style: normal
@@ -123,7 +119,7 @@ header.fixed
         border-bottom: none
 
 .new__arrivals
-    color: #F16D7F
+    color: $colorSelectSite
 
 .burger__links
     display: flex
@@ -133,124 +129,6 @@ header.fixed
 
 .burger__links:last-child
     padding-bottom: 32px
-
-.filter-sort
-    height: 132px
-    position: relative
-    display: flex
-    gap: $gapGrid
-
-.filter
-    z-index: 10
-    padding: 13px 16px 16px
-    width: 360px
-    box-sizing: border-box
-    position: absolute
-    top: 38px
-
-    &[open]
-        background: #FFF
-        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-
-    &[open] &__head
-        color: $colorSelectSite
-
-    &[open] path
-        fill: $colorSelectSite
-
-    & path
-        cursor: pointer
-
-    &__summary
-        gap: 11px
-
-    &__head
-        color: $colorName
-        cursor: pointer
-        font-size: 14px
-        font-weight: 600
-        line-height: 17px
-        letter-spacing: 0em
-        text-align: left
-        margin-right: 11px
-
-    &__item
-        margin-top: 16px
-
-        &[open] .filter__heading
-            color: $colorSelectSite
-
-    &__heading
-        display: flex
-        align-items: center
-        cursor: pointer
-        color: $colorText
-        font-size: 14px
-        font-weight: 400
-        line-height: 17px
-        letter-spacing: 0em
-        text-align: left
-        padding: 8px 11px 11px 11px
-        border-bottom: 1px solid #EBEBEB
-        border-left: 5px solid $colorSelectSite
-
-    &__item[open] .filter__heading
-        color: $colorSelectSite
-
-    &__link-box
-        display: flex
-        flex-direction: column
-        gap: 11px
-        padding: 24px 16px 24px 16px
-
-    &__link
-        font-size: 14px
-        font-weight: 400
-        line-height: 17px
-        text-align: left
-        color: $colorText
-        &:hover
-            color: $colorSelectSite
-
-.sort
-    display: flex
-    margin-left: 490px
-    margin-top: 51px
-    gap: 28px
-
-    &__check
-        display: flex
-        gap: 6px
-        align-items: center
-        font-family: Roboto
-        font-size: 14px
-        font-weight: 400
-        line-height: 16px
-        text-align: left
-
-    &__summary
-        display: flex
-        align-items: center
-        position: relative
-        gap: 10px
-        cursor: pointer
-        font-size: 14px
-        font-weight: 400
-        line-height: 17px
-        text-align: left
-        &:hover
-            color: $colorSelectSite
-        &:hover path
-            fill: $colorSelectSite
-
-    &__box
-        z-index: 10
-        margin-top: 5px
-        position: absolute
-        margin-left: -10px
-        background: #fff
-        box-shadow: 6px 4px 35px rgba(0,0,0,0.21)
-        padding: 7px 30px 11px 9px
 
 .header
     background-color: $backBlock
@@ -279,28 +157,224 @@ header.fixed
 
 .breadcrumbs__link
     font-size: 14px
-    font-weight: 400
+    font-weight: 400px
     line-height: 17px
     color: #636363
 
     &:hover
         color: $colorSelectSite
 
-.products
+.wrapper
+    background: #F7F7F7
+    padding: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.slick-slider
+    min-width: 0
+
+.slick-list
+    overflow: hidden
+
+.slick-track
+    display: flex
+    align-items: flex-start
+
+.slider
+    position: relative
+    padding: 0px 60px
+
+.slider .slick-arrow
+    position: absolute
+    top: 50%
+    margin: -30px 0px 0px 0px
+    z-index: 10
+    font-size: 0
+    width: 30px
+    height: 60px
+
+.slider .slick-arrow.slick-prev
+    width: 47px
+    height: 47px
+    left: 0
+    background: url('../img/sl-arrow_l.svg') center center no-repeat
+    background-color: #2A2A2A26
+    cursor: pointer
+
+.slider .slick-arrow.slick-prev:hover
+    background: url('../img/sl-arrow_l2.svg') center center no-repeat
+    background-color: #2A2A2A26
+
+.slider .slick-arrow.slick-next
+    right: 0
+    width: 47px
+    height: 47px
+    background: url('../img/sl-arrow_r.svg') center center no-repeat
+    background-color: #2A2A2A26
+    transition: background-color 0.3s
+    cursor: pointer
+
+.slider .slick-arrow.slick-next:hover
+    background: url('../img/sl-arrow_r2.svg') center center no-repeat
+    background-color: #2A2A2A26
+
+.slider__item
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0px 15px
+
+.slider__item img
+    max-width: 100%
+
+.description
+    position: relative
+    margin-bottom: 618px
+
+.description__inner
+    margin-top: -65px
+    padding: 65px 0
+    width: 1141px
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: #FFFFFF
+    border: 1px solid #EAEAEA
+
+.main__block
+    width: 642px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    border-bottom: 1px solid #EAEAEA
+
+.headers
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+.first__header
+    font-size: 14px
+    font-weight: 400
+    line-height: 17px
+    letter-spacing: 0em
+    text-align: left
+    color: $colorSelectSite
+
+.first__header::after
+    content: ''
+    margin: 12px auto
+    display: block
+    width: 63px
+    height: 4px
+    background-color: $colorSelectSite
+
+.second__header
+    font-size: 18px
+    font-weight: 400
+    line-height: 22px
+    letter-spacing: 0em
+    text-align: left
+    color: #4D4D4D
+    margin-bottom: 49px
+
+.texts
+    width: 555px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    gap: 32px
+
+.main__text
+    font-size: 13.7px
+    font-weight: 400
+    line-height: 17px
+    text-align: center
+    letter-spacing: 0em
+    color: #5E5E5E
+
+.big__price
+    font-size: 24px
+    font-weight: 400
+    line-height: 29px
+    letter-spacing: 0em
+    text-align: left
+    color: $colorSelectSite
+    margin-bottom: 65px
+
+.sort__block
+    padding-top: 65px
+
+.sort
+    display: flex
+    gap: 23px
     margin-bottom: 48px
 
-    &__start
-        text-align: center
-        justify-content: center
-        margin-bottom: 48px
-
-    &__title
-        color: $widthSite
-        font-family: $mainFont, sans-serif
-        font-size: 30px
-        font-style: normal
+    &__check
+        display: flex
+        gap: 6px
+        align-items: center
+        font-size: 14px
         font-weight: 400
-        line-height: normal
+        line-height: 16px
+        text-align: left
+
+    &__summary
+        display: flex
+        align-items: center
+        position: relative
+        gap: 10px
+        cursor: pointer
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        text-align: left
+        &:hover
+            color: $colorSelectSite
+        &:hover path
+            fill: $colorSelectSite
+
+.button__container
+    display: flex
+    align-items: center
+    justify-content: center
+
+.button
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 23px
+    background-color: #FFFFFF
+    border: solid 1px $colorSelectSite
+    transition: background-color 0.3s ease
+    padding: 15px 57px 15px 24px
+    &:hover
+        background-color: $colorSelectSite
+        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+    &:hover path
+        fill: #FFFFFF
+
+    &__text
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0em
+        text-align: left
+        color: #F26376
+
+    &:hover &__text
+        color: #FFFFFF
+
+.products
+    margin-bottom: 128px
 
     &__text
         color: #9F9F9F
@@ -393,71 +467,9 @@ header.fixed
     font-style: normal
     font-weight: 400
     line-height: normal
+
 footer
     background-color: $mainColor
-
-.about
-
-    &__inner
-        height: 341px
-        align-items: center
-        width: $widthSite
-        margin: 0 auto
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        grid-gap: 30px
-
-    &__cards
-        align-self: center
-        text-align: center
-
-    &__title
-        margin: 29px 0 16px 0
-        color: #FBFBFB
-        font-family: $mainFont, sans-serif
-        font-size: 19.96px
-        font-style: normal
-        font-weight: 400
-        line-height: normal
-
-    &__text
-        color: #FBFBFB
-        text-align: center
-        font-family: $mainFont, sans-serif
-        font-size: 13.972px
-        font-style: normal
-        font-weight: 300
-        line-height: normal
-
-.pagination
-    border: 1px solid #EBEBEB
-    margin: 0 auto
-    margin-top: 48px
-    margin-bottom: 96px
-    width: 284px
-
-    &__inner
-        padding: 12px 40px 13px 40px
-        display: flex
-        justify-content: center
-        align-items: center
-        gap: 10px
-
-.arrow
-    cursor: pointer
-
-.page-number
-    font-family: "Lato", sans-serif
-    font-size: 17px
-    font-weight: 300
-    line-height: 19px
-    letter-spacing: 0em
-    text-align: left
-    color: #C4C4C4
-
-.page-number:hover
-    color: #F16D7F
-
 .subscribe
     background-image: url(../img/background.png)
     background-size: cover

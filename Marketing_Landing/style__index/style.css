@@ -48,6 +48,12 @@ header {
   width: 1140px;
 }
 
+header.fixed {
+  position: fixed;
+  z-index: 10;
+  background-color: #222;
+}
+
 .logo {
   justify-content: center;
   display: flex;
@@ -70,7 +76,6 @@ header {
 
 /* <!-- /////////////////// Burger__menu /////////////////// --> */
 .nav.active {
-  box-shadow: 6px 4px 35px rgba(0,0,0,0.21);
   display: flex;
   width: 15%;
   flex-direction: column;
@@ -366,11 +371,11 @@ header {
 .button {
   cursor: pointer;
   background-color: #FFFFFF;
-  border: solid 1px #FF6A6A;
+  border: solid 1px #F16D7F;
   transition: background-color 0.3s ease;
 }
 .button:hover {
-  background-color: #f34058;
+  background-color: #F16D7F;
   animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .button__text {
@@ -524,7 +529,7 @@ input[type=email]::placeholder {
   height: 100%;
   width: 100%;
   display: block;
-  background-color: #E05C6E;
+  background-color: #F16D7F;
   color: #FFF;
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -541,7 +546,7 @@ input[type=email]::placeholder {
 }
 
 .subscribe_bt:hover {
-  background-color: #f34058;
+  background-color: #F16D7F;
 }
 
 .subscribe_bt:active {
