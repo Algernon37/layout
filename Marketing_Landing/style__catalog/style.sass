@@ -45,6 +45,53 @@ header
     height: 75px
     flex-shrink: 0
 
+.header
+    background-color: $mainColor
+    padding-top: 20px
+    padding-bottom: 20px
+
+    &__left
+        display: flex
+        align-items: center
+        gap: 41px
+
+.top-head
+    background: #F8F3F4
+    padding-top: 60px
+    padding-bottom: 60px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__heading
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: $colorSelectSite
+
+.breadcrumbs
+    &__ul
+        list-style-type: none
+        display: flex
+
+    &__li:not(:last-child)::after
+        content: '/'
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        color: #636363
+        padding: 0px 8px
+
+    &__link
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        color: #636363
+
+        &:hover
+            color: $colorSelectSite
+
 header.fixed
     position: fixed
     z-index: 10
@@ -252,40 +299,6 @@ header.fixed
         box-shadow: 6px 4px 35px rgba(0,0,0,0.21)
         padding: 7px 30px 11px 9px
 
-.header
-    background-color: $backBlock
-    padding-top: 20px
-    padding-bottom: 20px
-
-    &__left
-        display: flex
-        align-items: center
-        gap: 41px
-
-.top-head
-    background: #F8F3F4
-    padding-top: 60px
-    padding-bottom: 60px
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-    &__heading
-        font-style: normal
-        font-weight: 400
-        font-size: 24px
-        line-height: 29px
-        color: $colorSelectSite
-
-.breadcrumbs__link
-    font-size: 14px
-    font-weight: 400
-    line-height: 17px
-    color: #636363
-
-    &:hover
-        color: $colorSelectSite
-
 .products
     margin-bottom: 48px
 
@@ -316,6 +329,7 @@ header.fixed
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 30px
+        cursor: pointer
 
     &__cards
         background-color: #F8F8F8
@@ -344,17 +358,17 @@ header.fixed
 
 .centered-button
     display: flex
+    gap:11px
     align-items: center
     padding: 10px 20px
     color: #FFFFFF
     font-family: $mainFont, sans-serif
-    font-size: 14px
+    font-size: 16px
     font-style: normal
     font-weight: 400
     line-height: normal
     opacity: 1
     border: solid 1px
-    font-size: 16px
     cursor: pointer
     background: transparent
 
@@ -537,7 +551,7 @@ footer
     line-height: normal
 
 input[type="email"]::placeholder
-
+    opacity: 0.6
     color: $mainColor
     font-family: $mainFont, sans-serif
     font-size: 14px

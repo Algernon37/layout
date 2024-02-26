@@ -271,6 +271,7 @@ header.fixed {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  cursor: pointer;
 }
 .products__cards {
   background-color: #F8F8F8;
@@ -303,17 +304,17 @@ header.fixed {
 
 .centered-button {
   display: flex;
+  gap: 11px;
   align-items: center;
   padding: 10px 20px;
   color: #FFFFFF;
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   opacity: 1;
   border: solid 1px;
-  font-size: 16px;
   cursor: pointer;
   background: transparent;
 }
@@ -455,7 +456,7 @@ footer {
   width: 557px;
   gap: 32px;
 }
-.subscribe__container__email {
+.subscribe__container-email {
   position: relative;
   width: 320px;
   height: 49px;
@@ -487,8 +488,33 @@ footer {
   font-weight: 700;
   line-height: 167.2%;
 }
+.subscribe__bt {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: #F16D7F;
+  color: #FFF;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  transition: background-color 0.3s ease;
+  animation: shadow-pop-br 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+.subscribe__bt:hover {
+  background-color: #F16D7F;
+}
+.subscribe__bt:active {
+  animation: none;
+}
 
-.Typography__subscribe {
+.typography__subscribe {
   color: #222;
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -514,6 +540,7 @@ input[type=email]::-moz-placeholder {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  opacity: 0.6;
 }
 
 input[type=email]::placeholder {
@@ -523,34 +550,7 @@ input[type=email]::placeholder {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.subscribe_bt {
-  height: 100%;
-  width: 100%;
-  display: block;
-  background-color: #F16D7F;
-  color: #FFF;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  border-radius: 0 20px 20px 0;
-  transition: background-color 0.3s ease;
-  animation: shadow-pop-br 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-}
-
-.subscribe_bt:hover {
-  background-color: #F16D7F;
-}
-
-.subscribe_bt:active {
-  animation: none;
+  opacity: 0.6;
 }
 
 .for__our {

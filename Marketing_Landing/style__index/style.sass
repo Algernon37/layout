@@ -259,6 +259,7 @@ header.fixed
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 30px
+        cursor: pointer
 
     &__cards
         background-color: #F8F8F8
@@ -287,17 +288,17 @@ header.fixed
 
 .centered-button
     display: flex
+    gap:11px
     align-items: center
     padding: 10px 20px
     color: #FFFFFF
     font-family: $mainFont, sans-serif
-    font-size: 14px
+    font-size: 16px
     font-style: normal
     font-weight: 400
     line-height: normal
     opacity: 1
     border: solid 1px
-    font-size: 16px
     cursor: pointer
     background: transparent
 
@@ -427,7 +428,7 @@ footer
         width: 557px
         gap: 32px
 
-    &__container__email
+    &__container-email
         position: relative
         width: 320px
         height: 49px
@@ -459,7 +460,32 @@ footer
         font-weight: 700
         line-height: 167.2%
 
-.Typography__subscribe
+    &__bt
+        height: 100%
+        width: 100%
+        display: block
+        background-color: $colorSelectSite
+        color: #FFF
+        text-align: center
+        font-family: $mainFont, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        border: none
+        padding: 0
+        cursor: pointer
+        border-radius: 0 20px 20px 0
+        transition: background-color 0.3s ease
+        animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both
+
+    &__bt:hover
+        background-color: $colorSelectSite
+
+    &__bt:active
+        animation: none
+
+.typography__subscribe
     color: $mainColor
     text-align: center
     font-family: $mainFont, sans-serif
@@ -477,38 +503,13 @@ footer
     line-height: normal
 
 input[type="email"]::placeholder
-
     color: $mainColor
     font-family: $mainFont, sans-serif
     font-size: 14px
     font-style: normal
     font-weight: 400
     line-height: normal
-
-.subscribe_bt
-    height: 100%
-    width: 100%
-    display: block
-    background-color: $colorSelectSite
-    color: #FFF
-    text-align: center
-    font-family: $mainFont, sans-serif
-    font-size: 14px
-    font-style: normal
-    font-weight: 400
-    line-height: normal
-    border: none
-    padding: 0
-    cursor: pointer
-    border-radius: 0 20px 20px 0
-    transition: background-color 0.3s ease
-    animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both
-
-.subscribe_bt:hover
-    background-color: $colorSelectSite
-
-.subscribe_bt:active
-    animation: none
+    opacity: 0.6
 
 .for__our
     color: $mainColor
