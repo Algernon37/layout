@@ -72,7 +72,7 @@ header
 
 header.fixed
     position: fixed
-    z-index: 10
+    z-index: 11
     background-color: $mainColor
 
 .header__inner
@@ -120,7 +120,7 @@ header.fixed
         margin-bottom: 4px
 
     &__titles
-        color: #F16D7F
+        color: $colorSelectSite
         font-family: $mainFont, sans-serif
         font-size: 14px
         font-style: normal
@@ -131,8 +131,6 @@ header.fixed
 
     &__menu
         cursor: pointer
-
-
 
 .nav
     display: none
@@ -151,7 +149,7 @@ header.fixed
         border-bottom: none
 
 .new__arrivals
-    color:$colorSelectSite
+    color: $colorSelectSite
 
 .burger__links
     display: flex
@@ -172,11 +170,15 @@ header.fixed
     display: flex
     flex-direction: column
     gap: 40px
+    width: 652px
 
 .shopcard
     display: flex
     position: relative
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    border: solid 1px #EAEAEA
+
+    &:hover
+        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
     & svg
         position: absolute
@@ -209,6 +211,7 @@ header.fixed
         font-weight: 400
         line-height: 26px
         text-align: left
+        list-style: none
 
     &__price
         color: $colorSelectSite
@@ -216,6 +219,67 @@ header.fixed
         font-weight: 400
         line-height: 26px
         text-align: left
+
+.buttons
+    display: flex
+    gap: 192px
+
+.button
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #FFFFFF
+    border: solid 1px #A4A4A4
+    transition: background-color 0.3s ease
+    padding: 16px 34px
+
+    &:hover
+        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+        border: solid 1px #FFFFFF
+
+    &__text
+        font-size: 14px
+        font-weight: 400
+        line-height: 19px
+        color: $colorName
+
+    &__proceed
+        background-color: $colorSelectSite
+        border: solid 1px #FFFFFF
+
+        &:hover
+            background-color: #FFFFFF
+            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+            border: solid 1px $colorSelectSite
+
+        &-text
+            color: #FFFFFF
+
+        &:hover &-text
+            color: $colorSelectSite
+
+    &__order
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #FFFFFF
+        border: solid 1px #EAEAEA
+        width: 102px
+        height: 35px
+        padding: 10px 12px
+
+        &-text
+            font-size: 11px
+            font-weight: 400
+            line-height: 13px
+            letter-spacing: 0em
+            color: $colorText
+
+        &:hover
+            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+            border: solid 1px #FFFFFF
 
 #numberInput
     width: 44px
@@ -229,7 +293,76 @@ header.fixed
     outline: none
     border: solid 1px #EAEAEA
 
-//////______________Footer
+.shipp
+    width: 360px
+
+.order
+    margin-bottom: 57px
+
+    &__title
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
+        margin-bottom: 20px
+
+    &__form-inputs
+        display: flex
+        flex-direction: column
+        gap: 20px
+        margin-bottom: 23px
+
+    &__form-input
+        padding: 13px 0px 16px 17px
+        border: solid 1px #EAEAEA
+        outline: none
+        color: $colorText
+        font-size: 13px
+        font-weight: 400
+        line-height: 22px
+
+.shipp__buying
+    background: #F5F3F3
+
+.buying
+    display: flex
+    flex-direction: column
+    gap: 17px
+    justify-content: center
+    padding: 42px
+
+    &__cost
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 12px
+        padding-bottom: 21px
+        border-bottom: 1px solid #E2E2E2
+
+    &__title-small
+        font-size: 11px
+        font-weight: 400
+        line-height: 13px
+        letter-spacing: 0em
+        text-align: left
+        color: $colorText
+
+    &__title-big
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0em
+        text-align: left
+        color: $colorText
+
+    &__price
+        margin-left: 14px
+        &-total
+            margin-left: 14px
+            color: $colorSelectSite
+
 footer
     background-color: $mainColor
 
@@ -344,6 +477,16 @@ input[type="email"]::placeholder
     font-style: normal
     font-weight: 400
     line-height: normal
+
+input[type="text"]::placeholder
+    font-family: $mainFont, sans-serif
+    opacity: 0.6
+    color: $mainColor
+    font-size: 13px
+    font-weight: 400
+    line-height: 16px
+    letter-spacing: 0em
+    text-align: left
 
 .for__our
     color: $mainColor

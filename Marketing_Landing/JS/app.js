@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const burgerMenu = document.getElementById("burgerMenu");
     const nav = document.getElementById("nav");
     const productCardLinks = document.querySelectorAll('.products__cards');
+    const productCardBoxX = document.querySelectorAll(".shopcard__close");
 
     // При клике на кнопку бургера, добавляем или удаляем класс "active" для меню
     burgerMenu.addEventListener("click", function () {
@@ -42,7 +43,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-})
+    productCardBoxX.forEach(function (svg) {
+        svg.addEventListener('click', function () {
+            let shopcard = svg.closest('.shopcard');
+            if (shopcard) {
+                shopcard.style.display = 'none';
+            }
+        });
+    });
+
+    document.getElementById('clearCartButton').addEventListener('click', function () {
+        let shopcards = document.querySelectorAll('.shopcard');
+
+        shopcards.forEach(function (shopcard) {
+            shopcard.style.display = 'none';
+        });
+    });
+
+});
 
 $(document).ready(function () {
     $('.slider').slick({
