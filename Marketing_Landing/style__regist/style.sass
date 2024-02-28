@@ -3,39 +3,41 @@
 
 @keyframes shadow-pop-br
     0%
+        -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e
         box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e
+        -webkit-transform: translateX(0) translateY(0)
         transform: translateX(0) translateY(0)
 
     100%
+        -webkit-box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e
         box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e
+        -webkit-transform: translateX(-8px) translateY(-8px)
         transform: translateX(-8px) translateY(-8px)
 
 @keyframes shadow-drop-center
     0%
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
 
     100%
-        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5)
+        -webkit-box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.50)
+        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.50)
 
 *
     margin: 0
     padding: 0
-
-summary
-    display: block
-
-summary::-webkit-details-marker
-    display: none
+    border: 0
 
 body
-    font-family: 'lato', sans-serif
+    font-family: $mainFont, sans-serif
 
 a
+    cursor: pointer
     text-decoration: none
 
 .center
-    padding-left: calc(50% - $widthSite / 2)
-    padding-right: calc(50% - $widthSite / 2)
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
 
 header
     display: flex
@@ -44,31 +46,6 @@ header
     width: 100%
     height: 75px
     flex-shrink: 0
-
-.header
-    background-color: $mainColor
-    padding-top: 20px
-    padding-bottom: 20px
-
-    &__left
-        display: flex
-        align-items: center
-        gap: 41px
-
-.top-head
-    background: #F8F3F4
-    padding-top: 60px
-    padding-bottom: 60px
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-    &__heading
-        font-style: normal
-        font-weight: 400
-        font-size: 24px
-        line-height: 29px
-        color: $colorSelectSite
 
 header.fixed
     position: fixed
@@ -97,7 +74,6 @@ header.fixed
     cursor: pointer
 
 .nav.active
-    box-shadow: 6px 4px 35px rgba(0,0,0,0.21)
     display: flex
     width: 15%
     flex-direction: column
@@ -134,7 +110,6 @@ header.fixed
 
 .nav
     display: none
-
     &__link
         color: #6F6E6E
         font-family: $mainFont, sans-serif
@@ -160,41 +135,101 @@ header.fixed
 .burger__links:last-child
     padding-bottom: 32px
 
-.shopbox
+.header
+    background-color: $mainColor
+    padding-top: 20px
+    padding-bottom: 20px
+
+    &__left
+        display: flex
+        align-items: center
+        gap: 41px
+
+.top-head
+    background: #F8F3F4
+    padding-top: 60px
+    padding-bottom: 60px
     display: flex
-    justify-content: center
+    align-items: center
+    justify-content: space-between
+
+    &__heading
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: $colorSelectSite
+
+.breadcrumbs
+    &__ul
+        list-style-type: none
+        display: flex
+
+    &__li:not(:last-child)::after
+        content: '/'
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        color: #636363
+        padding: 0px 8px
+
+    &__link
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        color: #636363
+
+        &:hover
+            color: $colorSelectSite
+
+.registration
+    display: flex
     gap: 128px
-    margin: 96px 0px 128px 0px
+    margin: 64px 0px 96px 0px
 
-.shopcards
-    display: flex
-    flex-direction: column
-    gap: 40px
-    width: 652px
-
-.shopcard
-    display: flex
-    position: relative
-    border: solid 1px #EAEAEA
-
-    &:hover
-        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-
-    & svg
-        position: absolute
-        margin: 28px 22px 0px 0px
-        top: 0
-        right: 0
-        cursor: pointer
-
-    &__box
+    &__main
         display: flex
         flex-direction: column
-        gap: 42px
-        padding: 22px 97px 62px 31px
+        gap: 35px
 
-    &__img
-        width: 262px
+    &__button
+        width: 167px
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $colorSelectSite
+        border: solid 1px $colorSelectSite
+        transition: background-color 0.3s ease
+        padding: 16px 29px
+        color: #FFFFFF
+
+        &:hover
+            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+            border: solid 1px $colorSelectSite
+            background-color: #FFFFFF
+
+        &-text
+            display: flex
+            gap: 20px
+            font-size: 14px
+            font-weight: 400
+            line-height: 19px
+            color: #FFFFFF
+
+        &:hover &-text
+            color: $colorSelectSite
+
+        &-text svg
+            margin-top: 4px
+
+        &:hover path
+            fill: $colorSelectSite
+
+.perks
+    display: flex
+    flex-direction: column
+    gap: 22px
 
     &__title
         font-size: 24px
@@ -202,170 +237,101 @@ header.fixed
         line-height: 29px
         letter-spacing: 0em
         text-align: left
-
-    &__main
-        display: flex
-        flex-direction: column
-        gap: 6px
-        font-size: 22px
-        font-weight: 400
-        line-height: 26px
-        text-align: left
-        list-style: none
-
-    &__price
-        color: $colorSelectSite
-        font-size: 22px
-        font-weight: 400
-        line-height: 26px
-        text-align: left
-
-.buttons
-    display: flex
-    gap: 192px
-
-.button
-    cursor: pointer
-    display: flex
-    align-items: center
-    justify-content: center
-    background-color: #FFFFFF
-    border: solid 1px #A4A4A4
-    transition: background-color 0.3s ease
-    padding: 16px 34px
-
-    &:hover
-        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-        border: solid 1px #FFFFFF
+        color: $mainColor
 
     &__text
-        font-size: 14px
+        font-size: 24px
         font-weight: 400
-        line-height: 19px
-        color: $colorName
+        line-height: 29px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
 
-    &__proceed
-        background-color: $colorSelectSite
-        border: solid 1px #FFFFFF
+    &__ull
+        list-style: url('../img/jackdaw.svg')
+        margin-left: 30px
 
-        &:hover
-            background-color: #FFFFFF
-            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-            border: solid 1px $colorSelectSite
+    &__li
+        padding-left: 22px
+        margin-bottom: 16px
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
 
-        &-text
-            color: #FFFFFF
+.person
 
-        &:hover &-text
-            color: $colorSelectSite
-
-    &__order
-        cursor: pointer
-        display: flex
-        align-items: center
-        justify-content: center
-        background-color: #FFFFFF
-        border: solid 1px #EAEAEA
-        width: 102px
-        height: 35px
-        padding: 10px 12px
-
-        &-text
-            font-size: 11px
-            font-weight: 400
-            line-height: 13px
-            letter-spacing: 0em
-            color: $colorText
-            opacity: 0.6
-
-        &:hover &-text
-            opacity: 1
-
-        &:hover
-            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-            border: solid 1px #FFFFFF
-
-#numberInput
-    width: 44px
-    height: 24.95px
-    margin-left: 24px
-    text-align: center
-    font-size: 18px
-    font-weight: 400
-    line-height: 22px
-    color: $colorText
-    outline: none
-    border: solid 1px #EAEAEA
-
-.shipp
-    width: 360px
-
-.order
-    margin-bottom: 57px
-
-    &__title
+    .person__title
+        margin-bottom: 20px
         font-size: 16px
         font-weight: 400
         line-height: 19px
         letter-spacing: 0em
         text-align: left
         color: $mainColor
-        margin-bottom: 20px
 
     &__form-inputs
         display: flex
         flex-direction: column
         gap: 20px
-        margin-bottom: 23px
 
     &__form-input
         padding: 16px
-        border: solid 1px #EAEAEA
+        border: solid 1px #A4A4A4
         outline: none
         color: $colorText
         font-size: 13px
         font-weight: 400
         line-height: 22px
 
-.shipp__buying
-    background: #F5F3F3
-
-.buying
+.gender
     display: flex
-    flex-direction: column
-    gap: 17px
-    justify-content: center
-    padding: 42px
+    gap: 20px
 
-    &__cost
+    &__check
+        justify-content: center
         display: flex
-        flex-direction: column
-        align-items: flex-end
-        gap: 12px
-        padding-bottom: 21px
-        border-bottom: 1px solid #E2E2E2
+        align-items: center
+        gap: 10px
 
-    &__title-small
-        font-size: 11px
-        font-weight: 400
-        line-height: 13px
-        letter-spacing: 0em
-        text-align: left
-        color: $colorText
+.login
 
-    &__title-big
+    &__title
+        margin-bottom: 20px
         font-size: 16px
         font-weight: 400
         line-height: 19px
         letter-spacing: 0em
         text-align: left
-        color: $colorText
+        color: $mainColor
 
-    &__price
-        margin-left: 14px
-        &-total
-            margin-left: 14px
-            color: $colorSelectSite
+    &__form-inputs
+        display: flex
+        flex-direction: column
+        gap: 20px
+        margin-bottom: 15px
+
+    &__form-input
+        padding: 16px
+        border: solid 1px #A4A4A4
+        outline: none
+        color: $colorText
+        font-size: 13px
+        font-weight: 400
+        line-height: 22px
+
+    &__text
+        font-size: 13px
+        font-weight: 400
+        line-height: 16px
+        letter-spacing: 0em
+        text-align: left
+        color: #B1B1B1
+
+.radio-round
+    cursor: pointer
 
 footer
     background-color: $mainColor
@@ -489,7 +455,6 @@ input[type="text"]::placeholder
     font-size: 13px
     font-weight: 400
     line-height: 16px
-    letter-spacing: 0em
     text-align: left
 
 .for__our

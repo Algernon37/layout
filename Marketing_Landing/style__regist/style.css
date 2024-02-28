@@ -19,21 +19,15 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-summary {
-  display: block;
-}
-
-summary::-webkit-details-marker {
-  display: none;
+  border: 0;
 }
 
 body {
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -49,33 +43,6 @@ header {
   width: 100%;
   height: 75px;
   flex-shrink: 0;
-}
-
-.header {
-  background-color: #222;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.header__left {
-  display: flex;
-  align-items: center;
-  gap: 41px;
-}
-
-.top-head {
-  background: #F8F3F4;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.top-head__heading {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  color: #F16D7F;
 }
 
 header.fixed {
@@ -112,7 +79,6 @@ header.fixed {
 }
 
 .nav.active {
-  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   display: flex;
   width: 15%;
   flex-direction: column;
@@ -180,174 +146,153 @@ header.fixed {
   padding-bottom: 32px;
 }
 
-.shopbox {
+.header {
+  background-color: #222;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.header__left {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 41px;
+}
+
+.top-head {
+  background: #F8F3F4;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-head__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F16D7F;
+}
+
+.breadcrumbs__ul {
+  list-style-type: none;
+  display: flex;
+}
+.breadcrumbs__li:not(:last-child)::after {
+  content: "/";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #636363;
+  padding: 0px 8px;
+}
+.breadcrumbs__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #636363;
+}
+.breadcrumbs__link:hover {
+  color: #F16D7F;
+}
+
+.registration {
+  display: flex;
   gap: 128px;
-  margin: 96px 0px 128px 0px;
+  margin: 64px 0px 96px 0px;
 }
-
-.shopcards {
+.registration__main {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 652px;
+  gap: 35px;
 }
-
-.shopcard {
-  display: flex;
-  position: relative;
-  border: solid 1px #EAEAEA;
-}
-.shopcard:hover {
-  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.shopcard svg {
-  position: absolute;
-  margin: 28px 22px 0px 0px;
-  top: 0;
-  right: 0;
+.registration__button {
+  width: 167px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F16D7F;
+  border: solid 1px #F16D7F;
+  transition: background-color 0.3s ease;
+  padding: 16px 29px;
+  color: #FFFFFF;
 }
-.shopcard__box {
+.registration__button:hover {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  border: solid 1px #F16D7F;
+  background-color: #FFFFFF;
+}
+.registration__button-text {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+.registration__button:hover .registration__button-text {
+  color: #F16D7F;
+}
+.registration__button-text svg {
+  margin-top: 4px;
+}
+.registration__button:hover path {
+  fill: #F16D7F;
+}
+
+.perks {
   display: flex;
   flex-direction: column;
-  gap: 42px;
-  padding: 22px 97px 62px 31px;
+  gap: 22px;
 }
-.shopcard__img {
-  width: 262px;
-}
-.shopcard__title {
+.perks__title {
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
+  color: #222;
 }
-.shopcard__main {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 22px;
+.perks__text {
+  font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-  list-style: none;
-}
-.shopcard__price {
-  color: #F16D7F;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-}
-
-.buttons {
-  display: flex;
-  gap: 192px;
-}
-
-.button {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF;
-  border: solid 1px #A4A4A4;
-  transition: background-color 0.3s ease;
-  padding: 16px 34px;
-}
-.button:hover {
-  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  border: solid 1px #FFFFFF;
-}
-.button__text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19px;
-  color: #000;
-}
-.button__proceed {
-  background-color: #F16D7F;
-  border: solid 1px #FFFFFF;
-}
-.button__proceed:hover {
-  background-color: #FFFFFF;
-  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  border: solid 1px #F16D7F;
-}
-.button__proceed-text {
-  color: #FFFFFF;
-}
-.button__proceed:hover .button__proceed-text {
-  color: #F16D7F;
-}
-.button__order {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF;
-  border: solid 1px #EAEAEA;
-  width: 102px;
-  height: 35px;
-  padding: 10px 12px;
-}
-.button__order-text {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 13px;
+  line-height: 29px;
   letter-spacing: 0em;
-  color: #5D5D5D;
-  opacity: 0.6;
+  text-align: left;
+  color: #222;
 }
-.button__order:hover .button__order-text {
-  opacity: 1;
+.perks__ull {
+  list-style: url("../img/jackdaw.svg");
+  margin-left: 30px;
 }
-.button__order:hover {
-  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  border: solid 1px #FFFFFF;
-}
-
-#numberInput {
-  width: 44px;
-  height: 24.95px;
-  margin-left: 24px;
-  text-align: center;
-  font-size: 18px;
+.perks__li {
+  padding-left: 22px;
+  margin-bottom: 16px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 22px;
-  color: #5D5D5D;
-  outline: none;
-  border: solid 1px #EAEAEA;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #222;
 }
 
-.shipp {
-  width: 360px;
-}
-
-.order {
-  margin-bottom: 57px;
-}
-.order__title {
+.person .person__title {
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
   color: #222;
-  margin-bottom: 20px;
 }
-.order__form-inputs {
+.person__form-inputs {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 23px;
 }
-.order__form-input {
+.person__form-input {
   padding: 16px;
-  border: solid 1px #EAEAEA;
+  border: solid 1px #A4A4A4;
   outline: none;
   color: #5D5D5D;
   font-size: 13px;
@@ -355,47 +300,52 @@ header.fixed {
   line-height: 22px;
 }
 
-.shipp__buying {
-  background: #F5F3F3;
+.gender {
+  display: flex;
+  gap: 20px;
+}
+.gender__check {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.buying {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
-  justify-content: center;
-  padding: 42px;
-}
-.buying__cost {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-  padding-bottom: 21px;
-  border-bottom: 1px solid #E2E2E2;
-}
-.buying__title-small {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 13px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #5D5D5D;
-}
-.buying__title-big {
+.login__title {
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
+  color: #222;
+}
+.login__form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.login__form-input {
+  padding: 16px;
+  border: solid 1px #A4A4A4;
+  outline: none;
   color: #5D5D5D;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
 }
-.buying__price {
-  margin-left: 14px;
+.login__text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #B1B1B1;
 }
-.buying__price-total {
-  margin-left: 14px;
-  color: #F16D7F;
+
+.radio-round {
+  cursor: pointer;
 }
 
 footer {
@@ -535,7 +485,6 @@ input[type=text]::-moz-placeholder {
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
   text-align: left;
 }
 
@@ -546,7 +495,6 @@ input[type=text]::placeholder {
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
   text-align: left;
 }
 

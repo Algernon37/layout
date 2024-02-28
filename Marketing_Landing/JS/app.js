@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("nav");
     const productCardLinks = document.querySelectorAll('.products__cards');
     const productCardBoxX = document.querySelectorAll(".shopcard__close");
+    const radioButtons = document.querySelectorAll('.radio-round');
 
     // При клике на кнопку бургера, добавляем или удаляем класс "active" для меню
     burgerMenu.addEventListener("click", function () {
