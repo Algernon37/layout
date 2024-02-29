@@ -57,8 +57,7 @@ header
 
 .top-head
     background: #F8F3F4
-    padding-top: 60px
-    padding-bottom: 60px
+    padding: 60px
     display: flex
     align-items: center
     justify-content: space-between
@@ -358,7 +357,7 @@ header.fixed
 
 .centered-button
     display: flex
-    gap:11px
+    gap: 11px
     align-items: center
     padding: 10px 20px
     color: #FFFFFF
@@ -481,8 +480,7 @@ footer
     &__inner
         display: flex
         height: 100%
-        width: $widthSite
-        margin: 0 auto
+        padding: 0 100px
         text-align: center
         align-items: center
         gap: 20%
@@ -630,3 +628,280 @@ input[type="email"]::placeholder
 
 .social:hover path
     fill: #FFFFFF
+
+/* <!-- /////////////////// Media /////////////////// --> */
+
+@media (min-width: 768px) and (max-width: 1140px)
+    .header
+        width: 100%
+
+    .sort
+        margin-left: 435px
+
+    .filter
+        left: 50px
+
+    .offer
+        padding: 0
+        width: 100%
+        display: flex
+        justify-content: center
+
+        &__inner
+            width: 735px
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 15px
+
+        &__cards img,
+        &__big__card img
+            max-width: 100%
+            height: auto
+
+    .products__inner
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 16px
+        width: 735px
+        margin: 0 auto
+
+    .products__cards img
+        max-width: 100%
+        height: auto
+
+    .cards__info
+        padding: 12px 8px
+
+    .cards__title
+        font-size: 12px
+
+    .cards__text
+        font-size: 13px
+
+    .cards__price
+        font-size: 14px
+
+    .intro__info
+        border-left: 12px solid $colorSelectSite
+        padding-left: 16px
+        margin-top: 50%
+        margin-bottom: 50%
+
+    .about__inner
+        padding: 48px 0 64px 0
+        height: 610px
+        align-items: center
+        width: 360px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        grid-gap: 48px
+
+    .subscribe
+        background-image: url(../img/background.png)
+        background-size: cover
+        background-repeat: no-repeat
+        height: 693px
+
+        &__email
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 32px
+
+        &__inner
+            display: flex
+            flex-direction: column
+            height: 100%
+            margin: 0 auto
+            width: 360px
+            text-align: center
+            align-items: center
+            gap: 20%
+
+        &__info
+            margin-top: 64px
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            gap: 30px
+
+    .copyright__inner
+        display: flex
+        height: 100%
+        width: 735px
+        margin: 0 auto
+
+    .nav.active
+        display: flex
+        width: 25%
+        flex-direction: column
+        background-color: #FFFFFF
+        position: absolute
+        top: 75px
+        right: 0
+        z-index: 1
+        padding-left: 33px
+        padding-top: 32px
+
+@media (min-width: 320px) and (max-width: 767px)
+
+    .sort
+        margin: 50px auto
+
+    .burger__menu
+        margin-bottom: -10px
+
+    .filter
+        width: 290px
+        left: 20px
+        top: 90px
+
+    .breadcrumbs__li:not(:last-child)::after
+        padding: 0px 2px
+
+    .header
+        width: 100%
+
+    .logo
+        padding-left: 16px
+
+    .top-head
+        display: flex
+        flex-direction: column
+        gap: 32px
+
+    .button__copy
+        padding-right: 16px
+
+    .offer
+        padding: 0
+        width: 100%
+        display: flex
+        justify-content: center
+
+        &__inner
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 15px
+
+        &__cards img,
+        &__big__card img
+            max-width: 100%
+            height: auto
+
+    .products__inner
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        grid-gap: 16px
+        width: 85%
+        margin: 0 auto
+
+    .products__cards img
+        max-width: 100%
+        height: auto
+
+    .cards__info
+        padding: 12px 8px
+
+    .cards__title
+        font-size: 12px
+
+    .cards__text
+        font-size: 13px
+
+    .cards__price
+        font-size: 14px
+
+    .intro__info
+        border-left: 12px solid $colorSelectSite
+        padding-left: 16px
+        margin-top: 50%
+        margin-bottom: 50%
+        overflow-wrap: break-word
+
+    .offer__big__card img
+        height: 111px
+
+    .men,.basket
+        display: none
+
+    .about__inner
+        padding: 48px 0 64px 0
+        height: 610px
+        align-items: center
+        width: 320px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        grid-gap: 48px
+
+    .subscribe
+        background-image: url(../img/background.png)
+        background-size: cover
+        background-repeat: no-repeat
+        height: 550px
+        padding-bottom: 110px
+
+        &__email
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 32px
+            width: 320px
+
+        &__inner
+            display: flex
+            flex-direction: column
+            height: 100%
+            width: 320px
+            padding: 0
+            margin: 0 auto
+            text-align: center
+            align-items: center
+            gap: 20%
+
+        &__info
+            margin-top: 64px
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            gap: 30px
+
+    .copyright__inner
+        display: flex
+        flex-direction: column
+        align-items: center
+        height: 100%
+        width: 320px
+        margin: 0 auto
+        flex-direction: column-reverse
+
+    .social__container
+        margin-top: 43px
+        margin-bottom: 40px
+        display: flex
+        gap: 7.29px
+
+    .text__copyright
+        padding-top: 0
+        padding-bottom: 0
+        margin-bottom: 9px
+        color: #FBFBFB
+        font-family: $mainFont, sans-serif
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+    .nav.active
+        display: flex
+        width: 40%
+        flex-direction: column
+        background-color: #FFFFFF
+        position: absolute
+        top: 75px
+        right: 0
+        z-index: 1
+        padding-left: 33px
+        padding-top: 32px

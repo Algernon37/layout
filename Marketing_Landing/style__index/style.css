@@ -612,6 +612,10 @@ input[type=email]::placeholder {
   .header {
     width: 100%;
   }
+  .intro__img {
+    height: 50%;
+    margin-top: 90px;
+  }
   .offer {
     padding: 0;
     width: 100%;
@@ -690,20 +694,20 @@ input[type=email]::placeholder {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 48px;
   }
-  .subsribe {
-    background-image: url(/background.png);
+  .subscribe {
+    background-image: url(../img/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 693px;
   }
-  .subsribe__email {
+  .subscribe__email {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 360px;
     gap: 32px;
   }
-  .subsribe__inner {
+  .subscribe__inner {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -713,7 +717,7 @@ input[type=email]::placeholder {
     align-items: center;
     gap: 20%;
   }
-  .subsribe__info {
+  .subscribe__info {
     margin-top: 64px;
     display: flex;
     flex-direction: column;
@@ -746,6 +750,9 @@ input[type=email]::placeholder {
   }
   .header {
     width: 100%;
+  }
+  .burger__menu {
+    margin-bottom: -10px;
   }
   .logo {
     padding-left: 16px;
@@ -838,21 +845,21 @@ input[type=email]::placeholder {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 48px;
   }
-  .subsribe {
-    background-image: url(/background.png);
+  .subscribe {
+    background-image: url(../img/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 550px;
     padding-bottom: 110px;
   }
-  .subsribe__email {
+  .subscribe__email {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 320px;
     gap: 32px;
   }
-  .subsribe__inner {
+  .subscribe__inner {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -862,7 +869,7 @@ input[type=email]::placeholder {
     align-items: center;
     gap: 20%;
   }
-  .subsribe__info {
+  .subscribe__info {
     margin-top: 64px;
     display: flex;
     flex-direction: column;
