@@ -503,3 +503,190 @@ input[type="text"]::placeholder
 
 .social:hover path
     fill: #FFFFFF
+
+////////Media////////
+
+@media (min-width: 768px) and (max-width: 1140px)
+
+    .header
+        width: 100%
+
+    .top-head
+        padding: 60px
+
+    .shopbox
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 59px 0px 100px 0px
+
+    .registration
+        display: flex
+        gap: 22px
+        padding: 0px 20px
+
+    .subscribe
+        background-image: url(../img/background.png)
+        background-size: cover
+        background-repeat: no-repeat
+        height: 693px
+
+        &__email
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 32px
+
+        &__inner
+            display: flex
+            flex-direction: column
+            height: 100%
+            margin: 0 auto
+            width: 360px
+            text-align: center
+            align-items: center
+            gap: 20%
+
+        &__info
+            margin-top: 64px
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            gap: 30px
+
+    .copyright__inner
+        display: flex
+        height: 100%
+        width: 735px
+        margin: 0 auto
+
+    .nav.active
+        display: flex
+        width: 25%
+        flex-direction: column
+        background-color: #FFFFFF
+        position: absolute
+        top: 75px
+        right: 0
+        z-index: 1
+        padding-left: 33px
+        padding-top: 32px
+
+@media (min-width: 320px) and (max-width: 767px)
+
+    .top-head
+        padding: 60px
+
+    .burger__menu
+        margin-bottom: -10px
+
+    .header
+        width: 100%
+
+    .logo
+        padding-left: 16px
+
+    .men, .basket
+        display: none
+
+    .top-head
+        display: flex
+        flex-direction: column
+        gap: 32px
+
+    .men, .basket
+        display: none
+
+    .buttons
+        gap: 9px
+        justify-content: center
+
+    .button
+        padding: 10px 9px
+
+    .shipp
+        width: 100%
+
+    .registration
+        display: flex
+        flex-direction: column
+        padding: 0 15px
+        gap: 40px
+
+    .perks
+
+        &__title, &__text, &__li
+            font-size: 16px
+
+    .subscribe
+        background-image: url(../img/background.png)
+        background-size: cover
+        background-repeat: no-repeat
+        height: 550px
+        padding-bottom: 110px
+
+        &__email
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 32px
+            width: 320px
+
+        &__inner
+            display: flex
+            flex-direction: column
+            height: 100%
+            width: 320px
+            padding: 0
+            margin: 0 auto
+            text-align: center
+            align-items: center
+            gap: 20%
+
+        &__info
+            margin-top: 64px
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            gap: 30px
+
+    .copyright__inner
+        display: flex
+        flex-direction: column
+        align-items: center
+        height: 100%
+        width: 320px
+        margin: 0 auto
+        flex-direction: column-reverse
+
+    .social__container
+        margin-top: 43px
+        margin-bottom: 40px
+        display: flex
+        gap: 7.29px
+
+    .text__copyright
+        padding-top: 0
+        padding-bottom: 0
+        margin-bottom: 9px
+        color: #FBFBFB
+        font-family: $mainFont, sans-serif
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+    .nav.active
+        display: flex
+        width: 40%
+        flex-direction: column
+        background-color: #FFFFFF
+        position: absolute
+        top: 75px
+        right: 0
+        z-index: 1
+        padding-left: 33px
+        padding-top: 32px
