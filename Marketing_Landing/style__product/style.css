@@ -131,7 +131,7 @@ header.fixed {
   border-bottom: none;
 }
 
-.new__arrivals {
+.new__arrivals, .link__menu {
   color: #F16D7F;
 }
 
@@ -448,7 +448,7 @@ header.fixed {
   width: 1140px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
   cursor: pointer;
 }
@@ -731,21 +731,6 @@ input[type=email]::placeholder {
   .top-head {
     padding: 60px;
   }
-  .offer {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .offer__inner {
-    width: 735px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-  }
-  .offer__cards img, .offer__big__card img {
-    max-width: 100%;
-    height: auto;
-  }
   .wrapper {
     padding: 50px 0;
   }
@@ -756,7 +741,6 @@ input[type=email]::placeholder {
   }
   .products__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
     width: 735px;
     margin: 0 auto;
@@ -863,22 +847,7 @@ input[type=email]::placeholder {
   .button__copy {
     padding-right: 16px;
   }
-  .offer {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .offer__inner {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
-  }
-  .offer__cards img, .offer__big__card img {
-    max-width: 100%;
-    height: auto;
-  }
   .wrapper {
-    height: 375px;
     padding: 50px 0;
   }
   .description {
@@ -894,7 +863,7 @@ input[type=email]::placeholder {
     padding: 0 10px;
   }
   .slider__item {
-    padding: 0px;
+    padding: 10px;
   }
   .slider_item img {
     width: 374px;
@@ -917,7 +886,6 @@ input[type=email]::placeholder {
   }
   .products__inner {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     grid-gap: 16px;
     width: 85%;
     margin: 0 auto;
@@ -944,9 +912,6 @@ input[type=email]::placeholder {
     margin-top: 50%;
     margin-bottom: 50%;
     overflow-wrap: break-word;
-  }
-  .offer__big__card img {
-    height: 111px;
   }
   .men, .basket {
     display: none;

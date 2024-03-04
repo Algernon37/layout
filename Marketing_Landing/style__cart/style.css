@@ -165,7 +165,7 @@ header.fixed {
   border-bottom: none;
 }
 
-.new__arrivals {
+.new__arrivals, .link__menu {
   color: #F16D7F;
 }
 

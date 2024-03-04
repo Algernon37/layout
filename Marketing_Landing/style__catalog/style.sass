@@ -168,8 +168,8 @@ header.fixed
         color: $colorSelectSite
         border-bottom: none
 
-.new__arrivals
-    color: #F16D7F
+.new__arrivals, .link__menu
+    color: $colorSelectSite
 
 .burger__links
     display: flex
@@ -326,7 +326,7 @@ header.fixed
         width: $widthSite
         margin: 0 auto
         display: grid
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
         grid-gap: 30px
         cursor: pointer
 
@@ -641,25 +641,8 @@ input[type="email"]::placeholder
     .filter
         left: 50px
 
-    .offer
-        padding: 0
-        width: 100%
-        display: flex
-        justify-content: center
-
-        &__inner
-            width: 735px
-            grid-template-columns: repeat(3, 1fr)
-            grid-gap: 15px
-
-        &__cards img,
-        &__big__card img
-            max-width: 100%
-            height: auto
-
     .products__inner
         display: grid
-        grid-template-columns: repeat(3, 1fr)
         grid-gap: 16px
         width: 735px
         margin: 0 auto
@@ -774,24 +757,8 @@ input[type="email"]::placeholder
     .button__copy
         padding-right: 16px
 
-    .offer
-        padding: 0
-        width: 100%
-        display: flex
-        justify-content: center
-
-        &__inner
-            grid-template-columns: repeat(1, 1fr)
-            grid-gap: 15px
-
-        &__cards img,
-        &__big__card img
-            max-width: 100%
-            height: auto
-
     .products__inner
         display: grid
-        grid-template-columns: repeat(1, 1fr)
         grid-gap: 16px
         width: 320px
         margin: 0 auto
@@ -818,9 +785,6 @@ input[type="email"]::placeholder
         margin-top: 50%
         margin-bottom: 50%
         overflow-wrap: break-word
-
-    .offer__big__card img
-        height: 111px
 
     .men,.basket
         display: none

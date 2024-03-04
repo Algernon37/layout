@@ -128,7 +128,7 @@ header.fixed {
   border-bottom: none;
 }
 
-.new__arrivals {
+.new__arrivals, .link__menu {
   color: #F16D7F;
 }
 
@@ -269,7 +269,7 @@ header.fixed {
   width: 1140px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
   cursor: pointer;
 }
@@ -621,11 +621,6 @@ input[type=email]::placeholder {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-  .offer__inner {
-    width: 735px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
   }
   .offer__cards img, .offer__big__card img {
     max-width: 100%;
