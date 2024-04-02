@@ -210,5 +210,20 @@
     </footer> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="../JS/app.js"></script>
+    <script>
+        const btnEl = document.querySelector('.registration__button');
+        const inputEls = document.querySelectorAll('input');
+
+        btnEl.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            inputEls.forEach(element =>{
+                if (element.value.length > 0) {
+                    element.style.border = '2px solid green';
+                } else {
+                    element.style.border = '2px solid red';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

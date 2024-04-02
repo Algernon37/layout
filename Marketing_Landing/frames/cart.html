@@ -200,9 +200,7 @@
     <script>
         "use strick";
         const url = './data/dataCart.json';
-
         const shopcard = document.querySelector('.shopcards');
-
         fetch(url) 
         .then(response => response.json())
         .then(data => {
@@ -236,6 +234,22 @@
     });
         })
         .catch(err => console.error(`Ошибка: ${err}`))
+
+        "use strict";
+
+        const btnEl = document.querySelector('.button__order');
+        const inputEls = document.querySelectorAll('.order__form-input');
+
+        btnEl.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            inputEls.forEach(element =>{
+                if (element.value.length > 0) {
+                    element.style.border = '2px solid green';
+                } else {
+                    element.style.border = '2px solid red';
+                }
+            });
+        });
 
     </script>
 </body>
