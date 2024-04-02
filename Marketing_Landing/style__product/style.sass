@@ -404,14 +404,15 @@ header.fixed
 
     &__inner
         width: $widthSite
+        display: flex
+        justify-content: center
         margin: 0 auto
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
         grid-gap: 30px
         cursor: pointer
 
-    &__cards
+    &__card
         background-color: #F8F8F8
+        width:360px
 
 .image-container
     position: relative
@@ -815,12 +816,14 @@ input[type="email"]::placeholder
     .products__inner
         display: grid
         grid-gap: 16px
-        width: 85%
+        width: 320px
         margin: 0 auto
 
-    .products__cards img
-        max-width: 100%
-        height: auto
+    .products__card, .image-container img
+        width: 320px
+
+    .cards__info
+        padding: 12px 8px
 
     .cards__info
         padding: 12px 8px

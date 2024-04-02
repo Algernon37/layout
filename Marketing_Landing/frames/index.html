@@ -118,9 +118,9 @@
     </div>
  <!-- /////////////////// Button /////////////////// -->
     <div class="button__container">
-        <button class="button">
+        <a href="./catalog.html" class="button">
             <p class="button__text"> Browse All Product</p>
-        </button>
+        </a>
     </div>
  <!-- /////////////////// Footer /////////////////// -->
     <footer>
@@ -229,9 +229,7 @@
     <script>
         "use strick";
         const url = './data/dataIndex.json';
-
         const product = document.querySelector('.products__inner');
-
         fetch(url) 
         .then(response => response.json())
         .then(data => {
