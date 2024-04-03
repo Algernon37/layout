@@ -328,11 +328,27 @@
                 </div>
                 `)
             });
+        })
+        .then(element=>{
+            function handleProductClick(card) {
+                const productName = {
+                    header: card.querySelector('.cards__title').textContent,
+                    text: card.querySelector('.cards__text').textContent,
+                    price: card.querySelector('.cards__price').textContent,
+                    img: card.querySelector('.products__photo').src
+                };
+                localStorage.setItem('selectedProduct', JSON.stringify(productName));
+                window.location.href = '../frames/product.html';
+            }
             const productCardLinks = document.querySelectorAll('.products__card');
             productCardLinks.forEach(function (card) {
                 card.addEventListener('click', function () {
-                    window.location.href = '../frames/product.html';
+                    handleProductClick(card);
                 });
+            });
+            const cartButton = document.querySelector('.centered-button');
+            cartButton.addEventListener('click', function () {
+                    handleProductClick(lastClickedCard);
             });
         })
         .catch(err => console.error(`Ошибка: ${err}`)) 
