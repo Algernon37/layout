@@ -302,6 +302,7 @@
         "use strick";
         const url = './data/dataCatalog.json';
         const product = document.querySelector('.products__inner');
+        
         fetch(url) 
         .then(response => response.json())
         .then(data => {
