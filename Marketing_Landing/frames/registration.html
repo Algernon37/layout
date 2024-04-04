@@ -214,8 +214,7 @@
         const main = document.querySelector('main');
         const btnEl = document.querySelector('.registration__button');
         const inputEls = main.querySelectorAll('input');
-
-        btnEl.addEventListener('click', function(event) {
+         btnEl.addEventListener('click', function(event) {
             event.preventDefault(); 
             inputEls.forEach(element =>{
                 if (element.value.length > 0) {
