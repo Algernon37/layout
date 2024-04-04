@@ -230,6 +230,7 @@
         "use strick";
         const url = './data/dataIndex.json';
         const product = document.querySelector('.products__inner');
+
         fetch(url) 
         .then(response => response.json())
         .then(data => {
@@ -267,22 +268,27 @@
                         price: card.querySelector('.cards__price').textContent,
                         img: card.querySelector('.products__photo').src
                     };
+                    localStorage.setItem('selectedProduct',  JSON.stringify(productName))
                     window.location.href = '../frames/product.html';
                 });
             });
         })
         .then(element=>{
             const productCardLinks = document.querySelectorAll('.products__card');
+            
             productCardLinks.forEach(function (card) {
                 const addButton = card.querySelector('.centered-button');
                 addButton.addEventListener('click', function () {
-                    const productName = [{
+                    const productName = {
                         header: card.querySelector('.cards__title').textContent,
                         text: card.querySelector('.cards__text').textContent,
                         price: card.querySelector('.cards__price').textContent,
                         img: card.querySelector('.products__photo').src
-                    }];
-                    window.location.href = '../frames/product.html';
+                    };
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems'))|| [];
+                    cartItems.push(productName);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    window.location.href = '../frames/cart.html';
                 });
             });
         })

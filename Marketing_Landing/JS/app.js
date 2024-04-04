@@ -36,14 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    document.getElementById('clearCartButton').addEventListener('click', function () {
-        let shopcards = document.querySelectorAll('.shopcard');
-
-        shopcards.forEach(function (shopcard) {
-            shopcard.style.display = 'none';
-        });
-    });
-
 });
 
 

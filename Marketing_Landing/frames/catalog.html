@@ -77,7 +77,7 @@
             <ul class="breadcrumbs__ul">
                 <li class="breadcrumbs__li"><a href="./index.html" class="breadcrumbs__link">HOME</a></li>
                 <li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">MEN</a></li>
-                <li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">NEW ARRIVALS</a></li> 
+                <li class="breadcrumbs__li"><a href="./catalog.html" class="breadcrumbs__link">NEW ARRIVALS</a></li> 
             </ul>
         </nav>
     </div>
@@ -330,28 +330,40 @@
             });
         })
         .then(element=>{
-            function handleProductClick(card) {
-                const productName = {
-                    header: card.querySelector('.cards__title').textContent,
-                    text: card.querySelector('.cards__text').textContent,
-                    price: card.querySelector('.cards__price').textContent,
-                    img: card.querySelector('.products__photo').src
-                };
-                localStorage.setItem('selectedProduct', JSON.stringify(productName));
-                window.location.href = '../frames/product.html';
-            }
             const productCardLinks = document.querySelectorAll('.products__card');
             productCardLinks.forEach(function (card) {
                 card.addEventListener('click', function () {
-                    handleProductClick(card);
+                    const productName = {
+                        header: card.querySelector('.cards__title').textContent,
+                        text: card.querySelector('.cards__text').textContent,
+                        price: card.querySelector('.cards__price').textContent,
+                        img: card.querySelector('.products__photo').src
+                    };
+                    localStorage.setItem('selectedProduct',  JSON.stringify(productName))
+                    window.location.href = '../frames/product.html';
                 });
             });
-            const cartButton = document.querySelector('.centered-button');
-            cartButton.addEventListener('click', function () {
-                    handleProductClick(lastClickedCard);
+        })
+        .then(element=>{
+            const productCardLinks = document.querySelectorAll('.products__card');
+            
+            productCardLinks.forEach(function (card) {
+                const addButton = card.querySelector('.centered-button');
+                addButton.addEventListener('click', function () {
+                    const productName = {
+                        header: card.querySelector('.cards__title').textContent,
+                        text: card.querySelector('.cards__text').textContent,
+                        price: card.querySelector('.cards__price').textContent,
+                        img: card.querySelector('.products__photo').src
+                    };
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    cartItems.push(productName);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    window.location.href = '../frames/cart.html';
+                });
             });
         })
-        .catch(err => console.error(`Ошибка: ${err}`)) 
+        .catch(err => console.error(`Ошибка: ${err}`));
     </script>
 </body>
 </html> 

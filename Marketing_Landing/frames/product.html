@@ -80,7 +80,7 @@
                 <ul class="breadcrumbs__ul">
                     <li class="breadcrumbs__li"><a href="./index.html" class="breadcrumbs__link">HOME</a></li>
                     <li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">MEN</a></li>
-                    <li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">NEW ARRIVALS</a></li> 
+                    <li class="breadcrumbs__li"><a href="./catalog.html" class="breadcrumbs__link">NEW ARRIVALS</a></li> 
                 </ul>
             </nav> 
         </nav>
@@ -203,19 +203,6 @@
             </div>
                 `)
             });
-            const productCardLinks = document.querySelectorAll('.products__card');
-            productCardLinks.forEach(function (card) {
-                card.addEventListener('click', function () {
-                    const productName = {
-                       header: card.querySelector('.cards__title').textContent,
-                       text: card.querySelector('.cards__text').textContent,
-                       price: card.querySelector('.cards__price').textContent,
-                       img: card.querySelector('.products__photo').src
-                    };
-                    localStorage.setItem('selectedProduct', JSON.stringify(productName));
-                    window.location.href = '../frames/product.html';
-                });
-            });
         })
         .then(element => {
             const storedProduct = localStorage.getItem('selectedProduct');
@@ -305,21 +292,59 @@
             });
         })
         .then(element=>{
-            const cartButton = document.querySelector('.centered-button');
+            const productCardLinks = document.querySelectorAll('.products__card');
             productCardLinks.forEach(function (card) {
-                cartButton.addEventListener('click', function () {
+                card.addEventListener('click', function () {
                     const productName = {
-                       header: card.querySelector('.cards__title').textContent,
-                       text: card.querySelector('.cards__text').textContent,
-                       price: card.querySelector('.cards__price').textContent,
-                       img: card.querySelector('.products__photo').src
+                        header: card.querySelector('.cards__title').textContent,
+                        text: card.querySelector('.cards__text').textContent,
+                        price: card.querySelector('.cards__price').textContent,
+                        img: card.querySelector('.products__photo').src
                     };
-                    localStorage.setItem('selectedProduct', JSON.stringify(productName));
+                    localStorage.setItem('selectedProduct',  JSON.stringify(productName))
+                    window.location.href = '../frames/product.html';
+                });
+            });
+        })
+        .then(element=>{
+            const productCardLinks = document.querySelectorAll('.products__card');
+            
+            productCardLinks.forEach(function (card) {
+                const addButton = card.querySelector('.centered-button');
+                addButton.addEventListener('click', function () {
+                    const productName = {
+                        header: card.querySelector('.cards__title').textContent,
+                        text: card.querySelector('.cards__text').textContent,
+                        price: card.querySelector('.cards__price').textContent,
+                        img: card.querySelector('.products__photo').src
+                    };
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    cartItems.push(productName);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
                     window.location.href = '../frames/cart.html';
                 });
             });
         })
-        .catch(err => console.error(`Ошибка: ${err}`)) 
+        .then(element=>{
+            const storedProduct = localStorage.getItem('selectedProduct');
+            const selectedProduct = JSON.parse(storedProduct);
+            const productContainer = document.querySelector('.product__container');
+            const addButton = productContainer.querySelector('.button');
+
+            addButton.addEventListener('click', function () {
+                const productName = {
+                    header: selectedProduct.header,
+                    text: selectedProduct.text,
+                    price: selectedProduct.price,
+                    img: selectedProduct.img
+                };
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                cartItems.push(productName);
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                window.location.href = '../frames/cart.html';
+            });
+        })
+        .catch(err => console.error(`Ошибка: ${err}`));
     </script>
 </body>
 </html>
