@@ -488,6 +488,9 @@ footer {
   font-weight: 700;
   line-height: 167.2%;
 }
+.subscribe__photo {
+  border-radius: 50%;
+}
 .subscribe__bt {
   height: 100%;
   width: 100%;
