@@ -358,6 +358,9 @@ footer {
   background-repeat: no-repeat;
   height: 448px;
 }
+.subscribe__photo {
+  border-radius: 50%;
+}
 .subscribe__inner {
   display: flex;
   height: 100%;
