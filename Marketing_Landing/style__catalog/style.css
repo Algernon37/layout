@@ -574,6 +574,9 @@ footer {
   font-weight: 700;
   line-height: 167.2%;
 }
+.subscribe__photo {
+  border-radius: 50%;
+}
 
 .Typography__subscribe {
   color: #222;
